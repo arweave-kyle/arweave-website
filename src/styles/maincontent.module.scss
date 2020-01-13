@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+/* BODY */
+
+.contentbox {
+    overflow-y: scroll;
+    height: 80vh;
+    background-color: $white;
+    border: solid 0.5px $light-grey;
+}
+
+.content {
+    font-family: $font-stack-content;
+    padding: 5%;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 0px;
+}
+  
+::-webkit-scrollbar-track {
+    color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $medium-grey; 
+    border-radius: 0px;
+}
+  

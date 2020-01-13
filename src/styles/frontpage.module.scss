@@ -1,0 +1,222 @@
+@import './variables.scss';
+
+/* BUTTONS */
+
+@mixin button-padding-desktop {
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@mixin button-padding-mobile {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@mixin card-box-shadow {
+    -webkit-box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.33);
+    -moz-box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.33);
+    box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.33);
+}
+
+/* MAIN */
+
+body {
+    background-color: $white-grey;
+}
+
+/* TEXT */
+
+
+h1 {
+    font-family: $font-stack;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+h5 {
+    font-family: $font-stack-content;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+/* CARDS */
+
+.mainCard {
+    width: 100vw;
+    height: 75vh;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    padding-top: 7%;
+    background-color: $white;
+
+    text-align: center;
+
+    @include card-box-shadow;
+}
+
+.partnerCard {
+    width: 100vw;
+    height: 20vh;
+    padding: 10%;
+    background-color: $white-grey;
+}
+
+.leftCard {
+    width: 100vw;
+    height: 75vh;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    padding: 9%;
+    padding-top: 7%;
+    background-color: $white;
+
+    text-align: left;
+
+    @include card-box-shadow;
+}
+
+.rightCard {
+    width: 100vw;
+    height: 75vh;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    padding: 9%;
+    padding-top: 7%;
+    background-color: $white;
+
+    text-align: right;
+
+    @include card-box-shadow;
+}
+
+/* TEXT INSIDE CARDS - Separate them from each card so it's easier to maintain */
+
+.headline, .description {
+    margin-bottom: 6vh;
+}
+
+/* BUTTONS DESKTOP */
+  
+.buttonPrimary {
+    background-color: $medium-grey;
+    color: $white;
+    border: 2px solid $black;
+    margin: 0px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+  
+    box-shadow: 0 6px $black;
+    transition: none;
+
+    @include button-padding-desktop;
+}
+
+.buttonPrimary:hover {
+    background-color: $dark-grey;
+}
+  
+.buttonPrimary:active {
+    box-shadow: 0 5px $black;
+    transform: translateY(4px);
+}
+  
+.buttonPrimary:focus {
+    outline: none;
+}
+
+.buttonSecondary {
+    background-color: $white;
+    color: $black;
+    border: 2px solid $black;
+    margin: 0px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;;
+  
+    box-shadow: 0 6px $black;
+    transition: none;
+
+    @include button-padding-desktop;
+}
+  
+.buttonSecondary:hover {
+    background-color: $white-grey;
+}
+  
+.buttonSecondary:active {
+    box-shadow: 0 5px $dark-grey;
+    transform: translateY(4px);
+}
+  
+.buttonSecondary:focus {
+    outline: none;
+}
+
+
+/*Super small devices (mobile, 576px and smaller)*/
+@media (max-width: 576px) { 
+    h1 {
+        font-size: 3em;
+    }
+    h5 {
+        font-size: 1.1em;
+        line-height: 1.1em;
+    }
+    .leftCard, .rightCard {
+        text-align: center;
+    }
+    .headline {
+        margin-top: 4vh;
+        margin-bottom: 6vh;
+        padding-top: 4vh;
+    }
+    .description {
+        margin-bottom: 6vh !important;
+    }
+    .buttonPrimary {
+        @include button-padding-mobile;
+    }
+    .buttonSecondary {
+        @include button-padding-mobile;
+    }
+ }
+
+
+/*Small devices (phones, tablets, 577px to 768px)*/
+@media (min-width: 577px) and (max-width: 768px) {
+    h1 {
+        font-size: 7vw;
+    }
+    h5 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    .leftCard, .rightCard {
+        text-align: center;
+    }
+    .headline {
+        margin-top: 10vh;
+    }
+}
+
+/*Medium devices (tablets, 768px to 1200px)*/
+@media (min-width: 769px) and (max-width: 1200px) {
+    h5 {
+        font-size: 1rem;
+    }
+    .headline {
+        margin-top: 6vh;
+    }
+
+}
+
+
+
