@@ -47,7 +47,6 @@ class App extends React.Component {
       
         <div className="content">
           <Route path="/MainContent" component={MainContent} />
-          <Route path="/contact" component={Contact} />
           <Route path="/frontpage" component={FrontPage} />
         </div>
       </div>
