@@ -1,8 +1,10 @@
+const withSass = require('@zeit/next-sass')
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
 })
 
-module.exports = withMDX({
+const nextConfig = {
   pageExtensions: ['js', 'jsx', 'tsx', 'mdx'],
   exportTrailingSlash: true,
   env: {},
@@ -11,4 +13,6 @@ module.exports = withMDX({
       '/': { page: '/' }
     };
   }
-});
+};
+
+module.exports = withSass(withMDX(nextConfig));
