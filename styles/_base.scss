@@ -1,1 +1,45 @@
 @charset "UTF-8";
+
+// These selectors create even vertical spacing by clearing margins then adding
+// them back only for elements that are siblings of other elements, using the
+// "lobotomized owl" selector (* + *). The specificity is 0-0-0-0 so these can
+// be easily overriden by other selectors later in the CSS.
+* {
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  +* {
+    margin-top: $line-height-default * 1em;
+  }
+}
+
+body {
+  font-family: $font-family-mono;
+  letter-spacing: 0.025em;
+  line-height: $line-height-default;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-size-xxl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+h4 {
+  font-size: $font-size-md;
+}
+
+p,
+pre {
+  // Restrict paragraph measure by default to ensure readability.
+  max-width: $max-measure;
+}
