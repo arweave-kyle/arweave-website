@@ -110,5 +110,8 @@ temp/
 
 # End of https://www.gitignore.io/api/node
 
+# VScode config folder
 .vscode
+
+# nextjs static export folder
 out/
