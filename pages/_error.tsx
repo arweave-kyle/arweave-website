@@ -1,17 +1,11 @@
 import { NextPage } from 'next';
 
-const Error: NextPage<{ statusCode: number }> = ({ statusCode }) => {
+const Error: NextPage = () => {
   return (
     <p>
-      {`An error ${statusCode} occurred`}
+      {`An error occurred`}
     </p>
   )
-}
-
-Error.getInitialProps = ({ res, err }) => {
-  const errorCode = err ? err.statusCode || 500 : 404;
-  const statusCode = res ? res.statusCode || 500 : errorCode;
-  return { statusCode }
 }
 
 export default Error
