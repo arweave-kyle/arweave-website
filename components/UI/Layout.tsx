@@ -1,8 +1,8 @@
 import * as React from 'react'
 import Head from 'next/head'
-import Footer from './footer'
-import NavBar from './navbar'
-import SideBar from './sidebar'
+import Footer from './Footer'
+import NavBar from './Navbar'
+import SideBar from './Sidebar'
 
 type Props = {
   title?: string,
