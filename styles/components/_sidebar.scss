@@ -3,15 +3,10 @@ $sizebar-width: 18rem;
 .sidebar {
   $duration-secs: 0.4s;
 
-  display: block;
-
-  @include media-screen-small {
-    display: none;
-  }
-
   transition: width $duration-secs;
-  width: 0;
 
+  width: 0;
+  margin: 0;
   z-index: 5;
 
   .icon {
@@ -32,22 +27,75 @@ $sizebar-width: 18rem;
     }
   }
 
+  .close-icon {
+    display: none;
+
+    width: max-content;
+    margin-left: auto;
+    padding: $space-sm;
+    text-align: right;
+    cursor: pointer;
+  }
+
   &__content {
     transition: transform $duration-secs;
     width: $sizebar-width;
 
+    background: white;
+
     &__inner {
       display: flex;
       flex-direction: column;
-      padding: $space-md;
+
+      margin: 0;
+      padding: 0 $space-md $space-md $space-md;
     }
   }
 
   &__content.closed {
     transform: translateX(-100%);
   }
+
+  @include media-screen-small {
+    .close-icon {
+      display: block;
+    }
+
+    &__content {
+      position: absolute;
+      margin: 0;
+      /* Hidden by default */
+      width: 100%;
+      /* Full width (cover the whole page) */
+      height: 100%;
+      /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+      -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+      transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    }
+
+    &__content.closed {
+      transform: none;
+      right: 200%;
+      left: -100%;
+    }
+
+    &__content.open {
+      right: 0;
+      left: 0;
+    }
+  }
 }
 
 .sidebar.open {
   width: $sizebar-width;
+
+  @include media-screen-small {
+    width: 0;
+  }
 }
