@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 @import "variables";
+@import "mixins";
 
 // Generic element styles
 @import "base";
+
+@import "components";

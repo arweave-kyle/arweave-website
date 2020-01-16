@@ -1,10 +1,11 @@
-import { NextPage } from 'next';
+import { NextPage } from 'next'
+import Layout from '../components/layout/base'
 
 const Home: NextPage = () => (
-  <div>
+  <Layout>
     <h1>Hello world!</h1>
     <p>Quisque porta pharetra vehicula. Quisque tempor tortor sit amet felis egestas varius. Quisque porta pharetra vehicula. Quisque tempor tortor sit amet felis egestas varius. Vestibulum vel est vitae tellus imperdiet volutpat.</p>
-  </div>
+  </Layout>
 );
 
 export default Home;

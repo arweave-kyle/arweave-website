@@ -1,0 +1,65 @@
+@mixin media-screen-large {
+  @media screen and (min-width: 50rem) {
+    @content;
+  }
+}
+
+@mixin media-screen-small {
+  @media screen and (max-width: 35rem) {
+    @content;
+  }
+}
+
+// Adds even vertical spacing between the children of an element.
+@mixin even-spacing-v($space: $line-height-default * 1em) {
+  >* {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    @if ($space > 0) {
+      +* {
+        margin-top: $space;
+      }
+    }
+  }
+}
+
+// Adds even horizontal spacing between the children of an element. Also clears
+// any vertical spacing between the children.
+@mixin even-spacing-h($space: $line-height-default * 1em) {
+  >* {
+    margin: 0;
+
+    @if ($space > 0) {
+      +* {
+        margin-left: $space;
+      }
+    }
+  }
+}
+
+@mixin layout-grid($gap: $space-md) {
+  $target-width: calc(16% + 5rem);
+  $fallback-width: 18rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-gap: $gap;
+  grid-template-columns: repeat(auto-fill, minmax($target-width, 1fr));
+
+  >* {
+    margin: 0;
+    margin-right: $gap;
+    margin-bottom: $gap;
+    max-width: 100%;
+    width: $fallback-width;
+
+    @supports (display: grid) {
+      margin-right: 0;
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+}

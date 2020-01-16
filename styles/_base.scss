@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // These selectors create even vertical spacing by clearing margins then adding
 // them back only for elements that are siblings of other elements, using the
 // "lobotomized owl" selector (* + *). The specificity is 0-0-0-0 so these can
