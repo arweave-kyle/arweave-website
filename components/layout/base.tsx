@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Footer from './footer'
 import NavBar from './navbar'
 import SideBar from './sidebar'
+import SideBarMobile from './sidebarMobile'
 
 type Props = {
   title?: string,
@@ -27,6 +28,7 @@ const Layout: React.FunctionComponent<Props> = ({
       </Head>
       <div className="layout__inner">
         <SideBar />
+        <SideBarMobile />
         <div className="main">
           <NavBar />
           <div className="main__content">

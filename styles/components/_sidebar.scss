@@ -3,6 +3,12 @@ $sizebar-width: 18rem;
 .sidebar {
   $duration-secs: 0.4s;
 
+  display: block;
+
+  @include media-screen-small {
+    display: none;
+  }
+
   transition: width $duration-secs;
   width: 0;
 
@@ -13,6 +19,7 @@ $sizebar-width: 18rem;
     width: max-content;
 
     margin-left: $space-md;
+    cursor: pointer;
 
     div {
       width: 35px;
