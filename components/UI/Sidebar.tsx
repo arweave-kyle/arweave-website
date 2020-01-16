@@ -1,7 +1,8 @@
 import * as React from "react"
 import Link from "next/link"
+import SidebarMenu from "./SideBarMenu"
 
-const SideBar: React.FunctionComponent = () => {
+const Sidebar: React.FunctionComponent = () => {
   const [isOpen, setOpen] = React.useState<boolean>(false);
 
   return (
@@ -19,19 +20,11 @@ const SideBar: React.FunctionComponent = () => {
           <span>{" "}close</span>
         </div>
         <div className='sidebar__content__inner'>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-          <Link href="/users">
-            <a>Users List</a>
-          </Link>
+          <SidebarMenu />
         </div>
       </div>
     </div>
   )
 }
 
-export default SideBar
+export default Sidebar

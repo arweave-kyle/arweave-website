@@ -1,0 +1,63 @@
+$ICON_SIZE: 2rem;
+$DEFAULT_PADDING: 0.75rem;
+
+.rstm-toggle-icon {
+  display: inline-block;
+
+  &-symbol {
+    width: $ICON_SIZE;
+    height: $ICON_SIZE;
+    text-align: center;
+    line-height: $ICON_SIZE;
+  }
+}
+
+.rstm-tree-item-group {
+  list-style-type: none;
+  padding-left: 0;
+  border-top: 1px solid #ccc;
+  text-align: left;
+  width: 100%;
+}
+
+.tree-item-container {
+  margin-top: 0;
+}
+
+.rstm-tree-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: $color-text-black;
+  font-size: $font-size-md;
+  font-weight: 400;
+  background: none;
+  box-shadow: none;
+  z-index: unset;
+  position: relative;
+
+  &--active {
+    color: white;
+    background: #179ed3;
+  }
+
+  &--focused {
+    z-index: 999;
+  }
+}
+
+.tree-item-container.level-0 .rstm-tree-item {
+  padding: 0.75rem 1rem;
+
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+// .rstm-tree-item[role="button"] {
+//   font-weight: 400;
+// }
+
+.rstm-search {
+  padding: 1rem 1.5rem;
+  border: none;
+  width: 100%;
+}

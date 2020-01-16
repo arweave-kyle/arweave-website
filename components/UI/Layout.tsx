@@ -2,7 +2,7 @@ import * as React from 'react'
 import Head from 'next/head'
 import Footer from './Footer'
 import NavBar from './Navbar'
-import SideBar from './Sidebar'
+import Sidebar from './Sidebar'
 
 type Props = {
   title?: string,
@@ -21,12 +21,12 @@ const Layout: React.FunctionComponent<Props> = ({
         <link rel="icon" type="image/png" href="/favicon.png" />
         <title>{title}</title>
         <meta charSet="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content={desc} />
         <meta name="format-detection" content="telephone=no" />
       </Head>
       <div className="layout__inner">
-        <SideBar />
+        <Sidebar />
         <div className="main">
           <NavBar />
           <div className="main__content">
