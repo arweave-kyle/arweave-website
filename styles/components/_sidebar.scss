@@ -1,0 +1,46 @@
+$sizebar-width: 18rem;
+
+.sidebar {
+  $duration-secs: 0.4s;
+
+  transition: width $duration-secs;
+  width: 0;
+
+  z-index: 5;
+
+  .icon {
+    height: max-content;
+    width: max-content;
+
+    margin-left: $space-md;
+
+    div {
+      width: 35px;
+      height: 5px;
+      background-color: black;
+
+      +* {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &__content {
+    transition: transform $duration-secs;
+    width: $sizebar-width;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      padding: $space-md;
+    }
+  }
+
+  &__content.closed {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar.open {
+  width: $sizebar-width;
+}

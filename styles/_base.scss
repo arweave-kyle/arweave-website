@@ -19,6 +19,12 @@ body {
   margin: 0;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  height: $navbar-height;
+}
+
 h1 {
   font-size: $font-size-xxl;
 }

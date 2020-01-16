@@ -1,12 +1,14 @@
 $font-family-mono: "Roboto Mono",
 monospace;
 
+// Font sizes
 $font-size-sm: 0.8rem;
 $font-size-md: 1.0rem;
 $font-size-lg: 1.3rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2rem;
 
+// Space sizes
 $line-height-default: 1.666;
 
 $space-md: $line-height-default * 1rem;
@@ -17,6 +19,6 @@ $navbar-height: 4.5rem;
 $page-container-width: 80rem;
 $max-measure: 70ch;
 
+// Color
 $color-light-gray: #DADADA;
-
 $color-text-gray: #828282;

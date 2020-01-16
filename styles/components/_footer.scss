@@ -52,6 +52,7 @@ footer {
   .social-links {
     @include layout-grid;
 
+    grid-template-columns: 1fr 1fr;
     display: grid;
     margin-top: 0;
   }

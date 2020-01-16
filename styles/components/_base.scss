@@ -3,8 +3,21 @@
   min-height: 100vh;
   flex-direction: column;
 
-  &__container {
+  &__inner {
+    display: flex;
+    overflow: hidden;
+
     flex: 1 0 auto;
-    padding: 0 $space-md;
+
+    .main {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 $space-md;
+    }
   }
+}
+
+nav,
+div {
+  outline: 1px solid red;
 }

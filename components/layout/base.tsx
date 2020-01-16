@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import Footer from './footer'
 import NavBar from './navbar'
+import SideBar from './sidebar'
 
 type Props = {
   title?: string,
@@ -13,7 +13,9 @@ const Layout: React.FunctionComponent<Props> = ({
   children,
   title = 'Arweave',
   desc = 'Arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.'
-}) => (
+}) => {
+
+  return (
     <div className="layout">
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -23,12 +25,18 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta name="description" content={desc} />
         <meta name="format-detection" content="telephone=no" />
       </Head>
-      <header>
-        <NavBar />
-      </header>
-      <div className="layout__container">{children}</div>
+      <div className="layout__inner">
+        <SideBar />
+        <div className="main">
+          <NavBar />
+          <div className="main__content">
+            {children}
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )
+}
 
 export default Layout
