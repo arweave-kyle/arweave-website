@@ -17,6 +17,13 @@ $space-xs: $space-sm / 2;
 $space-xxs: $space-xs / 3;
 
 $border-radius-md: 0.3125rem;
+$border-radius-sm: 0.2rem;
+
+$border-width-sm: 1.5px;
+$border-width-lg: 7px;
+
+// animation
+$duration-short: 0.4s;
 
 // Page Layout
 $navbar-height: 4.5rem;
@@ -24,8 +31,13 @@ $page-container-width: 80rem;
 $max-measure: 70ch;
 
 // Color
+$color-black: #000000;
 $color-light-gray: #DADADA;
 $color-blue: #8FA3FF;
+
+$color-light-button-hover: #F5F5F5;
+$color-darker-button: #646464;
+$color-darker-button-hover: #2E2E2E;
 
 $color-text-gray: #828282;
 $color-text-black: #222326;

@@ -1,9 +1,7 @@
 $sizebar-width: 22rem;
 
 .sidebar {
-  $duration-secs: 0.4s;
-
-  transition: width $duration-secs;
+  transition: width $duration-short;
 
   width: 0;
   margin: 0;
@@ -38,7 +36,7 @@ $sizebar-width: 22rem;
   }
 
   &__content {
-    transition: transform $duration-secs;
+    transition: transform $duration-short;
     width: $sizebar-width;
 
     background: white;
