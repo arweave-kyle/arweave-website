@@ -13,6 +13,10 @@ $line-height-default: 1.666;
 
 $space-md: $line-height-default * 1rem;
 $space-sm: $space-md / 2;
+$space-xs: $space-sm / 2;
+$space-xxs: $space-xs / 3;
+
+$border-radius-md: 0.3125rem;
 
 // Page Layout
 $navbar-height: 4.5rem;
@@ -21,5 +25,7 @@ $max-measure: 70ch;
 
 // Color
 $color-light-gray: #DADADA;
+$color-blue: #8FA3FF;
+
 $color-text-gray: #828282;
 $color-text-black: #222326;

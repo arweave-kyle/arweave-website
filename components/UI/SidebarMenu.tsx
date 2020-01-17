@@ -85,9 +85,89 @@ const technologyTreeData = [
     key: 'playground',
     label: 'playground',
     class: 'primary',
+    isNew: true,
     nodes: [
       {
         key: 'playground-sub1',
+        label: 'Sub header 1',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }
+    ]
+  }
+];
+
+const communityTreeData = [
+  {
+    key: 'showcase',
+    label: 'showcase',
+    class: 'primary',
+    nodes: [
+      {
+        key: 'showcase-sub1',
+        label: 'Sub header 1',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }, {
+        key: 'showcase-sub2',
+        label: 'Sub header 2',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }
+    ],
+    url: 'https://www.google.com/search?q=mammal'
+  },
+  {
+    key: 'hackathon',
+    label: 'hackathon',
+    class: 'primary',
+    nodes: [
+      {
+        key: 'hackathon-sub1',
+        label: 'Sub header 1',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }
+    ]
+  },
+  {
+    key: 'blog',
+    label: 'blog',
+    class: 'primary',
+    isNew: true,
+    nodes: [
+      {
+        key: 'blog-sub1',
+        label: 'Sub header 1',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }
+    ]
+  }
+];
+
+const faqTreeData = [
+  {
+    key: 'permaweb',
+    label: 'what is permaweb?',
+    class: 'primary',
+    nodes: [
+      {
+        key: 'permaweb-sub1',
+        label: 'Sub header 1',
+        nodes: [],
+        url: 'https://www.google.com/search?q=canidae'
+      }
+    ],
+    url: 'https://www.google.com/search?q=mammal'
+  },
+  {
+    key: 'ourtech',
+    label: 'our technology',
+    class: 'primary',
+    nodes: [
+      {
+        key: 'hackathon-sub1',
         label: 'Sub header 1',
         nodes: [],
         url: 'https://www.google.com/search?q=canidae'
@@ -102,6 +182,8 @@ const SidebarMenu: React.FunctionComponent = () => {
     <div className="sidebar-menu">
       <SidebarMenuSection name="Development" treeData={developmentTreeData} />
       <SidebarMenuSection name="Technology" treeData={technologyTreeData} />
+      <SidebarMenuSection name="Community" treeData={communityTreeData} />
+      <SidebarMenuSection name="Faq" treeData={faqTreeData} />
     </div>
   )
 }

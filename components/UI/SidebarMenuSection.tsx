@@ -18,9 +18,9 @@ const SideBarMenuSection: React.FunctionComponent<Props> = ({
           {({ search, items }) => (
             <ul className="rstm-tree-item-group">
               {items.map(({ key, ...props }) => {
-                const { level, toggleNode, onClick } = props;
+                const { level, toggleNode, onClick, isNew } = props;
                 return (
-                  <div key={key} className={`tree-item-container level-${level}`}>
+                  <div key={key} className={`tree-item-container level-${level} ${isNew ? "new" : ""}`}>
                     <ItemComponent key={key} {...props} onClick={(evt) => {
                       if (toggleNode) { toggleNode() }
                       else { onClick(evt) }
