@@ -7,11 +7,15 @@ $font-size-md: 1.0rem;
 $font-size-lg: 1.3rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2rem;
+$font-size-xxxl: 4rem;
 
 // Space sizes
 $line-height-default: 1.666;
 
+
 $space-md: $line-height-default * 1rem;
+$space-lg: $space-md * 2;
+$space-xl: $space-lg * 2;
 $space-sm: $space-md / 2;
 $space-xs: $space-sm / 2;
 $space-xxs: $space-xs / 3;
@@ -33,6 +37,7 @@ $max-measure: 70ch;
 // Color
 $color-black: #000000;
 $color-light-gray: #DADADA;
+$color-super-light-gray: #D5D5D5;
 $color-blue: #8FA3FF;
 
 $color-light-button-hover: #F5F5F5;

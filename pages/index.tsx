@@ -1,10 +1,18 @@
 import { NextPage } from 'next'
 import Layout from '../components/UI/Layout'
+import CardLinkSection from '../components/CardLinkSection'
 
 const Home: NextPage = () => (
   <Layout>
-    <h1>Hello world!</h1>
-    <p>Quisque porta pharetra vehicula. Quisque tempor tortor sit amet felis egestas varius. Quisque porta pharetra vehicula. Quisque tempor tortor sit amet felis egestas varius. Vestibulum vel est vitae tellus imperdiet volutpat.</p>
+    <CardLinkSection title="Store data, permanently"
+      desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
+      action="see documentation" />
+    <CardLinkSection align="left" title="Feature Number One"
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      action="see documentation" />
+    <CardLinkSection align="right" title="Feature Number Two"
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      action="see documentation" />
   </Layout>
 );
 

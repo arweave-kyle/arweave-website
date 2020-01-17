@@ -27,9 +27,9 @@ const Layout: React.FunctionComponent<Props> = ({
       </Head>
       <div className="layout__inner">
         <Sidebar />
-        <div className="main">
+        <div className="page">
           <NavBar />
-          <div className="main__content">
+          <div className="page__content">
             {children}
           </div>
         </div>
