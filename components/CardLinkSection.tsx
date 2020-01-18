@@ -17,7 +17,6 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
   url = "#"
 }) => {
   const formatDesc = desc.split('  ').map((item, i) => {
-    console.log(item)
     return <p key={i}>{item}</p>
   });
   return (

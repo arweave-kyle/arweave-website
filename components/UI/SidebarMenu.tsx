@@ -8,24 +8,23 @@ const developmentTreeData = [
     class: 'primary',
     nodes: [
       {
-        key: 'mine-sub1',
-        label: 'Sub header 1',
+        key: 'mine-welcome',
+        label: 'Welcome to Arweave',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/mine/welcome'
       }, {
-        key: 'mine-sub2',
-        label: 'Sub header 2',
+        key: 'mine-about-us',
+        label: 'About us',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/mine/about'
       },
       {
         key: 'mine-sub3',
         label: 'Sub header 3',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ],
-    url: 'https://www.google.com/search?q=mammal'
   },
   {
     key: 'archive',
@@ -36,7 +35,7 @@ const developmentTreeData = [
         key: 'archive-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   },
@@ -49,7 +48,7 @@ const developmentTreeData = [
         key: 'deploy-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   }
@@ -65,21 +64,20 @@ const technologyTreeData = [
         key: 'wallet-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }, {
         key: 'wallet-sub2',
         label: 'Sub header 2',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       },
       {
         key: 'wallet-sub3',
         label: 'Sub header 3',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ],
-    url: 'https://www.google.com/search?q=mammal'
   },
   {
     key: 'playground',
@@ -91,7 +89,7 @@ const technologyTreeData = [
         key: 'playground-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   }
@@ -107,15 +105,14 @@ const communityTreeData = [
         key: 'showcase-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }, {
         key: 'showcase-sub2',
         label: 'Sub header 2',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
-    ],
-    url: 'https://www.google.com/search?q=mammal'
+    ]
   },
   {
     key: 'hackathon',
@@ -126,7 +123,7 @@ const communityTreeData = [
         key: 'hackathon-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   },
@@ -140,7 +137,7 @@ const communityTreeData = [
         key: 'blog-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   }

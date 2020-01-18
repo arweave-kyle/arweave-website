@@ -7,12 +7,7 @@ const withMDX = require('@next/mdx')({
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'tsx', 'mdx'],
   exportTrailingSlash: true,
-  env: {},
-  exportPathMap: function () {
-    return {
-      '/': { page: '/' }
-    };
-  }
+  env: {}
 };
 
 module.exports = withSass(withMDX(nextConfig));

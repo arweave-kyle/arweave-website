@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Layout from '../components/UI/Layout'
+import Layout from '../components/ui/Layout'
 import CardLinkSection from '../components/CardLinkSection'
 
 const Home: NextPage = () => (

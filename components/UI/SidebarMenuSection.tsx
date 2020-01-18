@@ -1,5 +1,6 @@
 import * as React from "react"
 import TreeMenu, { TreeNodeInArray, ItemComponent } from 'react-simple-tree-menu';
+import Router from 'next/router'
 
 type Props = {
   name: string,
@@ -14,7 +15,9 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
     <div className="menu-section">
       <h4>{name}</h4>
       <div className="tree-menu__container">
-        <TreeMenu data={treeData} hasSearch={false} >
+        <TreeMenu data={treeData} hasSearch={false} onClickItem={({ url }) => {
+          if (url) Router.push(url);
+        }} >
           {({ search, items }) => (
             <ul className="rstm-tree-item-group">
               {items.map(({ key, ...props }) => {
