@@ -1,5 +1,5 @@
 import *  as React from "react"
-import SidebarMenuSection from "./SideBarMenuSection"
+import SidebarMenuSection from "./SidebarMenuSection"
 
 const developmentTreeData = [
   {

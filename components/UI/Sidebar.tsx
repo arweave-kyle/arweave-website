@@ -1,6 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
-import SidebarMenu from "./SideBarMenu"
+import SidebarMenu from "./SidebarMenu"
 
 const Sidebar: React.FunctionComponent = () => {
   const [isOpen, setOpen] = React.useState<boolean>(false);

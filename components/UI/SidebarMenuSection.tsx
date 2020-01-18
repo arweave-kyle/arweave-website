@@ -6,7 +6,7 @@ type Props = {
   treeData: TreeNodeInArray[],
 }
 
-const SideBarMenuSection: React.FunctionComponent<Props> = ({
+const SidebarMenuSection: React.FunctionComponent<Props> = ({
   name = "Menu Section",
   treeData = []
 }) => {
@@ -36,4 +36,4 @@ const SideBarMenuSection: React.FunctionComponent<Props> = ({
   )
 }
 
-export default SideBarMenuSection
+export default SidebarMenuSection
