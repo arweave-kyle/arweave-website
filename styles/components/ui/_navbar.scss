@@ -11,4 +11,24 @@
     right: $space-md;
     margin-top: 0;
   }
+
+  a.desktop {
+    display: block;
+  }
+
+  a.mobile {
+    display: none;
+    padding: $space-xxs $space-xs;
+    border: $border-width-sm solid $color-text-black;
+  }
+
+  @include media-screen-small {
+    a.desktop {
+      display: none;
+    }
+
+    a.mobile {
+      display: block;
+    }
+  }
 }

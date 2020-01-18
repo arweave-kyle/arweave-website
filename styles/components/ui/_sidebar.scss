@@ -48,9 +48,10 @@ $sizebar-width: 22rem;
     &__inner {
       display: flex;
       flex-direction: column;
-
       margin: 0;
       padding: 0 $space-md $space-md $space-md;
+
+      background: white;
     }
   }
 
@@ -64,7 +65,8 @@ $sizebar-width: 22rem;
     }
 
     &__content {
-      position: absolute;
+      position: fixed;
+      overflow: scroll;
       margin: 0;
       /* Hidden by default */
       width: 100%;
@@ -83,12 +85,12 @@ $sizebar-width: 22rem;
 
     &__content.closed {
       transform: none;
-      right: 200%;
+      // right: 200%;
       left: -100%;
     }
 
     &__content.open {
-      right: 0;
+      // right: 0;
       left: 0;
     }
   }

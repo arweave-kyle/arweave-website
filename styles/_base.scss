@@ -71,9 +71,8 @@ a.btn {
   color: $color-text-black;
   padding: $space-xxs $space-md;
 
-  border: $border-width-sm solid;
-  border-bottom: $border-width-lg solid;
-  border-color: $color-text-black;
+  border: $border-width-sm solid $color-text-black;
+  border-bottom: $border-width-lg solid $color-text-black;
   border-radius: $border-radius-sm;
 
   font-size: $font-size-md;

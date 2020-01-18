@@ -1,13 +1,23 @@
 .card-link-section {
   padding: $space-lg;
 
+  @include media-screen-small {
+    padding: $space-md;
+  }
+
   h1 {
     font-size: $font-size-xxxl;
     line-height: $font-size-xxxl;
+
+    @include media-screen-small {
+      font-size: $font-size-xxl;
+      line-height: $font-size-xxl * 1.5;
+    }
   }
 
   a.btn {
     margin-top: $space-lg;
+    max-width: 20rem;
   }
 
   &__inner {
@@ -20,7 +30,7 @@
 
   &__content.center {
     max-width: 60ch;
-    padding: $space-xl 0;
+    padding: $space-xl $space-md;
     margin: auto;
 
     h1,
@@ -36,6 +46,10 @@
       margin-top: 0;
     }
 
+    a.btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__content.left {
