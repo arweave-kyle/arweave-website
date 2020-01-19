@@ -5,7 +5,6 @@ const developmentTreeData = [
   {
     key: 'mine',
     label: 'mine',
-    class: 'primary',
     nodes: [
       {
         key: 'mine-welcome',
@@ -29,7 +28,6 @@ const developmentTreeData = [
   {
     key: 'archive',
     label: 'archive',
-    class: 'primary',
     nodes: [
       {
         key: 'archive-sub1',
@@ -42,7 +40,6 @@ const developmentTreeData = [
   {
     key: 'deploy',
     label: 'deploy',
-    class: 'primary',
     nodes: [
       {
         key: 'deploy-sub1',
@@ -58,7 +55,6 @@ const technologyTreeData = [
   {
     key: 'wallet',
     label: 'wallet',
-    class: 'primary',
     nodes: [
       {
         key: 'wallet-sub1',
@@ -82,7 +78,6 @@ const technologyTreeData = [
   {
     key: 'playground',
     label: 'playground',
-    class: 'primary',
     isNew: true,
     nodes: [
       {
@@ -117,7 +112,6 @@ const communityTreeData = [
   {
     key: 'hackathon',
     label: 'hackathon',
-    class: 'primary',
     nodes: [
       {
         key: 'hackathon-sub1',
@@ -130,7 +124,6 @@ const communityTreeData = [
   {
     key: 'blog',
     label: 'blog',
-    class: 'primary',
     isNew: true,
     nodes: [
       {
@@ -147,7 +140,6 @@ const faqTreeData = [
   {
     key: 'permaweb',
     label: 'what is permaweb?',
-    class: 'primary',
     nodes: [
       {
         key: 'permaweb-sub1',
@@ -160,7 +152,6 @@ const faqTreeData = [
   {
     key: 'ourtech',
     label: 'our technology',
-    class: 'primary',
     nodes: [
       {
         key: 'hackathon-sub1',

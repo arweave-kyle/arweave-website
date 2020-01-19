@@ -4,7 +4,7 @@ import Router from 'next/router'
 
 type Props = {
   name: string,
-  treeData: TreeNodeInArray[]
+  treeData: TreeNodeInArray[],
 }
 
 function getPath(): string | undefined {
@@ -34,27 +34,39 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
   name = "Menu Section",
   treeData = []
 }) => {
+  const [isReady, setisReady] = React.useState()
+
+  React.useEffect(() => {
+    setisReady(true)
+  }, []);
+
+  if (!isReady) return null
+
   const routePath = getPath()
   const activeKey = findActiveKey(routePath, treeData)
-  const openNodes = activeKey ? [activeKey.substring(0, activeKey.lastIndexOf("/"))] : []
+  const openNodes = activeKey ? [activeKey.substring(0, activeKey.lastIndexOf("/")), activeKey] : []
 
   return (
     <div className="menu-section">
       <h4>{name}</h4>
       <div className="tree-menu__container">
         <TreeMenu data={treeData}
-          initialActiveKey={activeKey || ""}
+          initialActiveKey={activeKey}
           initialOpenNodes={openNodes}
           hasSearch={false}
+          disableKeyboard={false}
           onClickItem={({ url }) => {
             if (url) Router.push(url);
           }} >
           {({ items }) => (
             <ul className="rstm-tree-item-group">
-              {items.map(({ key, ...props }) => {
-                const { level, toggleNode, onClick, isNew } = props;
+              {items.map(props => {
+                const { key, hasNodes, toggleNode, onClick, isNew } = props
+                const headerClassName = hasNodes ? "header" : ""
+                const newClassName = isNew ? "new" : ""
+
                 return (
-                  <div key={key} className={`tree-item-container level-${level} ${isNew ? "new" : ""}`}>
+                  <div key={key} className={`tree-item-container ${headerClassName} ${newClassName}`}>
                     <ItemComponent key={key} {...props} onClick={(evt) => {
                       if (toggleNode) { toggleNode() }
                       else { onClick(evt) }
