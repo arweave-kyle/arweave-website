@@ -5,9 +5,14 @@ $sizebar-width: 22rem;
 
   width: 0;
   margin: 0;
-  z-index: 5;
+  z-index: 1;
 
   nav {
+    position: fixed;
+
+    z-index: 1;
+    width: 0;
+
     background: white;
   }
 
@@ -40,6 +45,7 @@ $sizebar-width: 22rem;
   }
 
   &__content {
+    margin-top: $navbar-height + $space-md;
     transition: transform $duration-short;
     width: $sizebar-width;
 
@@ -55,6 +61,10 @@ $sizebar-width: 22rem;
   }
 
   @include media-screen-small {
+    nav {
+      position: unset;
+    }
+
     .close-icon {
       display: block;
     }
@@ -93,6 +103,10 @@ $sizebar-width: 22rem;
 
 .sidebar.open {
   width: $sizebar-width;
+
+  nav {
+    width: $sizebar-width;
+  }
 
   @include media-screen-small {
     width: 0;
