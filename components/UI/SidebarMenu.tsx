@@ -153,10 +153,9 @@ const faqTreeData = [
         key: 'permaweb-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
-    ],
-    url: 'https://www.google.com/search?q=mammal'
+    ]
   },
   {
     key: 'ourtech',
@@ -167,7 +166,7 @@ const faqTreeData = [
         key: 'hackathon-sub1',
         label: 'Sub header 1',
         nodes: [],
-        url: 'https://www.google.com/search?q=canidae'
+        url: '/'
       }
     ]
   }

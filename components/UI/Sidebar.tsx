@@ -16,7 +16,7 @@ const Sidebar: React.FunctionComponent = () => {
       </nav>
       <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
         <div className="close-icon" onClick={() => setOpen(false)}>
-          <img src="images/icons/close.svg" />
+          <img src="/images/icons/close.svg" />
           <span>{" "}close</span>
         </div>
         <div className='sidebar__content__inner'>

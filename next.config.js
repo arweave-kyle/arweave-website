@@ -6,7 +6,6 @@ const withMDX = require('@next/mdx')({
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'tsx', 'mdx'],
-  exportTrailingSlash: true,
   env: {}
 };
 
