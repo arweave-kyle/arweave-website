@@ -12,7 +12,9 @@ export default function WithLayout<P extends Props>(WrappedComponent: NextCompon
     const { title, desc } = meta || {};
     return (
       <Layout title={title || ""} desc={desc || ""}>
-        {children}
+        <div className="md-content">
+          {children}
+        </div>
       </Layout>
     )
   }
