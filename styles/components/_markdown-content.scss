@@ -1,20 +1,25 @@
 .md-content {
-  hr.slash {
-    border: none;
+  hr {
     margin-top: $space-sm;
-
-    &:before {
-      content: '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////';
-      font-size: $font-size-md;
-    }
   }
 
   p {
     max-width: none;
   }
 
-  img {
+  img[src*="#fullwidth"] {
     width: 100%;
     object-fit: cover;
+  }
+
+  img[src*="#thumbnail"] {
+    max-width: 20rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  img[src*="#center"] {
+    display: block;
+    margin: 0 auto;
   }
 }
