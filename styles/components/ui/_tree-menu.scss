@@ -24,6 +24,8 @@ $DEFAULT_PADDING: 0.75rem;
 }
 
 .rstm-tree-item {
+  position: relative;
+
   padding: 0.5rem 1rem;
   cursor: pointer;
   color: $color-text-black;
@@ -35,8 +37,21 @@ $DEFAULT_PADDING: 0.75rem;
   position: relative;
 
   &--active {
-    color: white;
-    background: #179ed3;
+    font-weight: bold;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 3.2rem;
+      top: 1rem;
+
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
   }
 
   &--focused {

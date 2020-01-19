@@ -49,7 +49,7 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
           onClickItem={({ url }) => {
             if (url) Router.push(url);
           }} >
-          {({ search, items }) => (
+          {({ items }) => (
             <ul className="rstm-tree-item-group">
               {items.map(({ key, ...props }) => {
                 const { level, toggleNode, onClick, isNew } = props;
