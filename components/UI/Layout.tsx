@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Footer from './Footer'
 import NavBar from './Navbar'
 import Sidebar from './Sidebar'
+import CookiesBanner from '../CookiesBanner'
 
 type Props = {
   title?: string,
@@ -35,6 +36,7 @@ const Layout: React.FunctionComponent<Props> = ({
         </div>
       </div>
       <Footer />
+      <CookiesBanner />
     </div>
   )
 }

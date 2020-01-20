@@ -38,6 +38,22 @@
   }
 }
 
+@mixin layout-switcher($breakpoint: 40rem, $gap-v: $space-md, $gap-h: $gap-v) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap-h;
+  margin-bottom: -$gap-v;
+
+  >* {
+    // The magic happens here: the basis effectively switches between 0 and 100%
+    // when it crosses the breakpoint.
+    flex: 1 1 calc((#{$breakpoint} - 100%) * 999);
+    margin: 0;
+    margin-left: $gap-h;
+    margin-bottom: $gap-v;
+  }
+}
+
 @mixin layout-grid($gap: $space-md) {
   $target-width: calc(16% + 5rem);
   $fallback-width: 18rem;

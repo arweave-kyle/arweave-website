@@ -34,10 +34,10 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
   name = "Menu Section",
   treeData = []
 }) => {
-  const [isReady, setisReady] = React.useState()
+  const [isReady, setIsReady] = React.useState()
 
   React.useEffect(() => {
-    setisReady(true)
+    setIsReady(true)
   }, []);
 
   if (!isReady) return null
