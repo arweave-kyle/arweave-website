@@ -5,7 +5,8 @@
   "scripts": {
     "build": "next build",
     "start": "next -p 5000",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "deploy:static": "now out -A now.json --prod"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.3",
