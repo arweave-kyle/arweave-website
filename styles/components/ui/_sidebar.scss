@@ -62,7 +62,7 @@ $sizebar-width: 22rem;
 
   @include media-screen-small {
     nav {
-      position: unset;
+      z-index: 0;
     }
 
     .close-icon {
@@ -109,6 +109,10 @@ $sizebar-width: 22rem;
   }
 
   @include media-screen-small {
+    nav {
+      width: 0;
+    }
+
     width: 0;
   }
 }

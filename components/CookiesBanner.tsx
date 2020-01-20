@@ -71,7 +71,7 @@ const CookiesBanner: React.FunctionComponent = () => {
   if (!shouldRender) return null
 
   return (
-    <div className={`cookies-banner ${!isOpen ? "closed" : ""}`}>
+    <div className={`cookies-banner ${!isOpen ? "closed" : ""} ${isAccepted ? "approved" : ""}`}>
       {isAccepted ? renderAccepted(onClose) : renderDefault(onApprove, onDeny)}
     </div>
   )

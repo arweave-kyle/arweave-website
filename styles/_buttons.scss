@@ -1,0 +1,31 @@
+button {
+  background: white;
+  color: $color-text-black;
+  padding: $space-xs $space-md;
+
+  box-shadow: 0 6px $color-text-black;
+  border: $border-width-sm solid $color-text-black;
+  border-radius: $border-radius-sm;
+
+  font-size: $font-size-md;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $color-light-button-hover;
+  }
+
+  &:active {
+    background-color: $color-light-button-hover;
+    box-shadow: 0 4px $color-text-black;
+    transform: translateY(4px);
+  }
+}
+
+button.primary {
+  background: $color-darker-button;
+  color: white;
+
+  &:hover {
+    background: $color-darker-button-hover;
+  }
+}
