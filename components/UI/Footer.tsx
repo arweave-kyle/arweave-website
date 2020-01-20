@@ -9,7 +9,7 @@ const Footer: React.FunctionComponent = () => (
         <a className="brand"><h1>arweave.org</h1></a>
       </Link>
       <div className="links">
-        <Link href="/">
+        <Link href="/mine/about">
           <a>about us</a>
         </Link>
         <Link href="/">

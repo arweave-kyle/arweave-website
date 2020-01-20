@@ -30,6 +30,11 @@ function findActiveKey(path: string | undefined, nodes: TreeNodeInArray[] | unde
   return undefined
 }
 
+function checkAbsoluteUrl(urlStr: string) {
+  const pat = /^https?:\/\//i;
+  return pat.test(urlStr);
+}
+
 const SidebarMenuSection: React.FunctionComponent<Props> = ({
   name = "Menu Section",
   treeData = []
@@ -56,7 +61,9 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
           hasSearch={false}
           disableKeyboard={false}
           onClickItem={({ url }) => {
-            if (url) Router.push(url);
+            if (!url) return
+            if (checkAbsoluteUrl(url)) window.location.href = url;
+            else Router.push(url);
           }} >
           {({ items }) => (
             <ul className="rstm-tree-item-group">
