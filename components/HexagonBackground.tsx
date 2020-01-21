@@ -9,6 +9,18 @@ function getImagePaths() {
 }
 
 const HexagonBackground: React.FunctionComponent = () => {
+  const [opacity, setOpacity] = React.useState(1);
+
+  React.useEffect(() => {
+    // Fade out while scrolling
+    window.onscroll = () => {
+      const newScrollHeight = Math.ceil(window.scrollY);
+      const newOpacity = Math.max(1 - newScrollHeight / 500, 0).toFixed(2)
+      const newOpacityValue = parseFloat(newOpacity);
+      setOpacity(newOpacityValue)
+    }
+  }, []);
+
   const imagePaths = getImagePaths()
   const renderGridItem = imagePaths.map((imagePath, index) => {
     const key = `${index}`
@@ -22,7 +34,7 @@ const HexagonBackground: React.FunctionComponent = () => {
   })
 
   return (
-    <ul className="hexagonbg-grid clear">
+    <ul className="hexagonbg-grid clear" style={{ opacity }}>
       {renderGridItem}
     </ul>
   )
