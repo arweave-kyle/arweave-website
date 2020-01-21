@@ -14,6 +14,7 @@
       margin-top: 0;
       padding: 0 $space-xl;
       // background: $color-super-light-gray;
+      
       @include media-screen-small {
         padding: 0 $space-md;
       }
