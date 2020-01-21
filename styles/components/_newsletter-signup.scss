@@ -1,0 +1,28 @@
+.newsletter-signup {
+  text-align: center;
+
+  &__inner {
+    max-width: 50rem;
+    padding: $space-md;
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+
+    input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      border-radius: $border-radius-lg 0 0 $border-radius-lg;
+    }
+
+    button {
+      margin-top: 0;
+      text-transform: uppercase;
+      font-size: $font-size-lg;
+
+      border-radius: 0 $border-radius-lg $border-radius-lg 0;
+    }
+  }
+}

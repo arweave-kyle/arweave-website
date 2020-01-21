@@ -1,5 +1,4 @@
 import * as React from "react"
-import Link from "next/link"
 
 type Props = {
   align?: string,
@@ -25,9 +24,7 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
         <div className={`card-link-section__content ${align}`}>
           <h1>{title}</h1>
           {formatDesc}
-          <Link href={url}>
-            <a className="btn">{action}</a>
-          </Link>
+          <a className="btn" href={url}>{action}</a>
         </div>
       </div>
     </div>

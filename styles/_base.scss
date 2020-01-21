@@ -45,6 +45,7 @@ h4 {
 p {
   font-family: $font-family-sans;
 }
+
 p,
 pre {
   // Restrict paragraph measure by default to ensure readability.
@@ -62,4 +63,16 @@ pre {
   white-space: -o-pre-wrap;
   /* Opera 7 */
   word-wrap: break-word;
+}
+
+input {
+  box-shadow: 0 6px $color-text-black;
+  border: $border-width-sm solid $color-text-black;
+  border-radius: $border-radius-sm;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: $font-size-lg;
+  padding: 0.6em 0.8em;
+  resize: vertical;
+  width: 100%;
 }

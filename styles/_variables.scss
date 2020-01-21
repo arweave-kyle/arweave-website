@@ -1,6 +1,7 @@
 $font-family-mono: "Roboto Mono",
 monospace;
-$font-family-sans: "Work Sans", sans-serif;
+$font-family-sans: "Work Sans",
+sans-serif;
 
 // Font sizes
 $font-size-sm: 0.8rem;
@@ -21,6 +22,7 @@ $space-sm: $space-md / 2;
 $space-xs: $space-sm / 2;
 $space-xxs: $space-xs / 3;
 
+$border-radius-lg: 0.5rem;
 $border-radius-md: 0.3125rem;
 $border-radius-sm: 0.2rem;
 
