@@ -8,13 +8,13 @@ const Home: NextPage = () => (
     <HexagonBackground />
     <CardLinkSection title="Store data, permanently"
       desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
-      action="see documentation" />
+      action="SEE DOCUMENTATION" />
     <CardLinkSection align="left" title="Feature Number One"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      action="see documentation" />
+      action="DOWNLOAD NOW" />
     <CardLinkSection align="right" title="Feature Number Two"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      action="see documentation" />
+      action="GO TO THAT PAGE" />
   </Layout>
 );
 
