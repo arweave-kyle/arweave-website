@@ -45,7 +45,7 @@ $sizebar-width: 22rem;
   }
 
   &__content {
-    margin-top: $navbar-height + $space-md;
+    margin-top: $navbar-height;
     transition: transform $duration-short;
     width: $sizebar-width;
 
@@ -53,6 +53,7 @@ $sizebar-width: 22rem;
 
     &__inner {
       padding: 0 $space-md $space-md $space-md;
+      padding-top: $space-md + $space-md;
     }
   }
 
