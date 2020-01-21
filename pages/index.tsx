@@ -1,9 +1,11 @@
 import { NextPage } from 'next'
 import Layout from '../components/UI/Layout'
 import CardLinkSection from '../components/CardLinkSection'
+import HexagonBackground from '../components/HexagonBackground'
 
 const Home: NextPage = () => (
   <Layout>
+    <HexagonBackground />
     <CardLinkSection title="Store data, permanently"
       desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
       action="see documentation" />
