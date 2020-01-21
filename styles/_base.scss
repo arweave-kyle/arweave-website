@@ -42,6 +42,9 @@ h4 {
   font-size: $font-size-md;
 }
 
+p {
+  font-family: $font-family-sans;
+}
 p,
 pre {
   // Restrict paragraph measure by default to ensure readability.
