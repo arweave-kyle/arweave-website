@@ -18,6 +18,12 @@
   a.btn {
     margin-top: $space-lg;
     max-width: 20rem;
+    transition: 0.3s;
+  }
+
+  a.btn:hover {
+    background-color: whitesmoke;
+    transition: 0.3s;
   }
 
   &__inner {

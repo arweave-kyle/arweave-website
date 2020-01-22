@@ -23,8 +23,14 @@
       margin-top: 0;
       text-transform: uppercase;
       font-size: $font-size-md;
+      transition: 0.3s;
+      cursor: pointer;
 
       border-radius: 0 $border-radius-lg $border-radius-lg 0;
+    }
+
+    button:hover {
+      transition: 0.3s;
     }
   }
 }
