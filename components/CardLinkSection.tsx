@@ -5,7 +5,8 @@ type Props = {
   title: string,
   desc: string,
   action?: string,
-  url?: string
+  url?: string,
+  aosConfig?: object
 }
 
 const CardLinkSection: React.FunctionComponent<Props> = ({
@@ -13,13 +14,14 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
   title = "",
   desc = "",
   action = "see document",
-  url = "#"
+  url = "#",
+  aosConfig = {}
 }) => {
   const formatDesc = desc.split('  ').map((item, i) => {
     return <p key={i}>{item}</p>
   });
   return (
-    <div className="card-link-section">
+    <div className="card-link-section" {...aosConfig}>
       <div className={`card-link-section__inner ${align}`}>
         <div className={`card-link-section__content ${align}`}>
           <h1>{title}</h1>

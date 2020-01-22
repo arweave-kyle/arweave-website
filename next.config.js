@@ -1,4 +1,5 @@
 const withSass = require('@zeit/next-sass')
+const withCSS = require("@zeit/next-css");
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
@@ -9,4 +10,4 @@ const nextConfig = {
   env: {}
 };
 
-module.exports = withSass(withMDX(nextConfig));
+module.exports = withSass(withCSS(withMDX(nextConfig)));
