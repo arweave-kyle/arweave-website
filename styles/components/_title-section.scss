@@ -15,11 +15,11 @@
   }
 
   &__inner {
-    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
+    /*-webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
-
-    padding: $space-md * 1.5;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);*/
+    background-color: whitesmoke;
+    padding: $space-lg * 1.5;
   }
 
   &__content {

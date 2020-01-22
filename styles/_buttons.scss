@@ -24,6 +24,7 @@ button {
 button.primary {
   background: $color-darker-button;
   color: white;
+  font-family: $font-family-mono;
 
   &:hover {
     background: $color-darker-button-hover;

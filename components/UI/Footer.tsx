@@ -4,18 +4,18 @@ const Footer: React.FunctionComponent = () => (
   <footer>
     <div className="footer__inner">
       <div className="footer__content">
-        <div className="footer__section">
-          <a href="/"><img src="/nav-logo.svg" /></a>
+        <div className="footer__section space">
+          <a href="/"><img src="/footer-logo.svg" /></a>
           <div className="links">
-            <a href="/mine/about">the parmaweb</a>
+            <a href="/mine/about">the permaweb</a>
             <a>our technology</a>
             <a>team</a>
             <a>faqs</a>
             <a>report a link</a>
           </div>
         </div>
-        <div className="footer__section">
-          <h3>get started</h3>
+        <div className="footer__section space">
+          <h4>get started</h4>
           <div className="links">
             <a>get free token</a>
             <a>start archiving</a>
@@ -24,8 +24,8 @@ const Footer: React.FunctionComponent = () => (
             <a>arweave deploy</a>
           </div>
         </div>
-        <div className="footer__section">
-          <h3>documentation</h3>
+        <div className="footer__section space">
+          <h4>documentation</h4>
           <div className="links">
             <a>get free token</a>
             <a>start archiving</a>
@@ -33,8 +33,8 @@ const Footer: React.FunctionComponent = () => (
             <a>arweave js</a>
           </div>
         </div>
-        <div className="footer__section">
-          <h3>community</h3>
+        <div className="footer__section space">
+          <h4>community</h4>
           <div className="links">
             <a href="https://github.com">
               <div>
@@ -63,7 +63,6 @@ const Footer: React.FunctionComponent = () => (
           </div>
         </div>
       </div>
-      <hr />
     </div>
   </footer>
 )

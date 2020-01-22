@@ -9,7 +9,7 @@ footer {
   margin-right: auto;
 
   hr {
-    margin-top: $space-lg;
+    margin-top: $space-md;
   }
 }
 
@@ -21,6 +21,8 @@ footer {
   a {
     text-decoration: none;
     color: $color-super-light-gray;
+    line-height: 0.2rem;
+    font-size: $font-size-sm;    
 
     div {
       display: flex;
@@ -39,4 +41,8 @@ footer {
     display: flex;
     flex-direction: column;
   }
+}
+
+.space {
+  margin-left: $space-lg;
 }

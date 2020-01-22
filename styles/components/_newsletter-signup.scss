@@ -3,7 +3,7 @@
 
   &__inner {
     max-width: 50rem;
-    padding: $space-md;
+    padding: $space-xs;
     margin: 0 auto;
   }
 
@@ -13,6 +13,8 @@
     input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      padding: 0.3em 0.8em;
+      font-size: $font-size-md;
 
       border-radius: $border-radius-lg 0 0 $border-radius-lg;
     }
@@ -20,7 +22,7 @@
     button {
       margin-top: 0;
       text-transform: uppercase;
-      font-size: $font-size-lg;
+      font-size: $font-size-md;
 
       border-radius: 0 $border-radius-lg $border-radius-lg 0;
     }
