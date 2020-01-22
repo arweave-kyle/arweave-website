@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <HexagonBackground />
-      <CardLinkSection aosConfig={{ "data-aos": "fade-up" }} title="Store data, permanently"
+      <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "1500" }} title="Store data, permanently"
         desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
         action="SEE DOCUMENTATION" />
       <TitleSection title="Friends and partners" className="images-grid">
