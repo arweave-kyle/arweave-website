@@ -1,50 +1,69 @@
 import * as React from "react"
-import Link from "next/link"
 
 const Footer: React.FunctionComponent = () => (
   <footer>
-    <hr />
     <div className="footer__inner">
-      <Link href="/">
-        <a className="brand"><h1>arweave.org</h1></a>
-      </Link>
-      <div className="links">
-        <Link href="/mine/about">
-          <a>about us</a>
-        </Link>
-        <Link href="/">
-          <a>terms</a>
-        </Link>
-        <Link href="/">
-          <a>privacy</a>
-        </Link>
-        <Link href="/">
-          <a>policies</a>
-        </Link>
-        <Link href="/">
-          <a>sitemap</a>
-        </Link>
+      <div className="footer__content">
+        <div className="footer__section">
+          <a href="/"><img src="/nav-logo.svg" /></a>
+          <div className="links">
+            <a href="/mine/about">the parmaweb</a>
+            <a>our technology</a>
+            <a>team</a>
+            <a>faqs</a>
+            <a>report a link</a>
+          </div>
+        </div>
+        <div className="footer__section">
+          <h3>get started</h3>
+          <div className="links">
+            <a>get free token</a>
+            <a>start archiving</a>
+            <a>start mining</a>
+            <a>arweave js</a>
+            <a>arweave deploy</a>
+          </div>
+        </div>
+        <div className="footer__section">
+          <h3>documentation</h3>
+          <div className="links">
+            <a>get free token</a>
+            <a>start archiving</a>
+            <a>start mining</a>
+            <a>arweave js</a>
+          </div>
+        </div>
+        <div className="footer__section">
+          <h3>community</h3>
+          <div className="links">
+            <a href="https://github.com">
+              <div>
+                <img src="/images/socials/medium.svg" />
+                <span>github</span>
+              </div>
+            </a>
+            <a href="https://twitter.com">
+              <div>
+                <img src="/images/socials/medium.svg" />
+                <span>twitter</span>
+              </div>
+            </a>
+            <a href="https://discord.com">
+              <div>
+                <img src="/images/socials/medium.svg" />
+                <span>discord</span>
+              </div>
+            </a>
+            <a href="https://telegram.org">
+              <div>
+                <img src="/images/socials/medium.svg" />
+                <span>telegram</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="social-links">
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-        <Link href="/">
-          <a><img src="/images/socials/medium.svg" /></a>
-        </Link>
-      </div>
+      <hr />
     </div>
   </footer>
 )

@@ -11,12 +11,12 @@ const Home: NextPage = () => (
     <CardLinkSection title="Store data, permanently"
       desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
       action="SEE DOCUMENTATION" />
-    <TitleSection title="Friends and partners">
-      <img src="https://via.placeholder.com/200x80.png" />
-      <img src="https://via.placeholder.com/100x80.png" />
-      <img src="https://via.placeholder.com/100x80.png" />
-      <img src="https://via.placeholder.com/100x80.png" />
-      <img src="https://via.placeholder.com/100x80.png" />
+    <TitleSection title="Friends and partners" className="images-grid">
+      <div><img src="https://via.placeholder.com/200x80.png" /></div>
+      <div><img src="https://via.placeholder.com/100x80.png" /></div>
+      <div><img src="https://via.placeholder.com/100x80.png" /></div>
+      <div><img src="https://via.placeholder.com/100x80.png" /></div>
+      <div><img src="https://via.placeholder.com/100x80.png" /></div>
     </TitleSection>
     <CardLinkSection align="left" title="Feature Number One"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -24,10 +24,10 @@ const Home: NextPage = () => (
     <CardLinkSection align="right" title="Feature Number Two"
       desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       action="GO TO THAT PAGE" />
-    <TitleSection title="Latest from the team">
-      <img src="https://via.placeholder.com/300x320.png" />
-      <img src="https://via.placeholder.com/300x320.png" />
-      <img src="https://via.placeholder.com/300x320.png" />
+    <TitleSection title="Latest from the team" className="images-grid fill">
+      <div><img src="https://via.placeholder.com/300x320.png" /></div>
+      <div><img src="https://via.placeholder.com/300x320.png" /></div>
+      <div><img src="https://via.placeholder.com/300x320.png" /></div>
     </TitleSection>
     <NewsletterSignup />
   </Layout>

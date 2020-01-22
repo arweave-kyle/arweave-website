@@ -27,11 +27,36 @@
     justify-content: space-between;
     align-items: center;
 
-    max-width: $page-container-width;
+    // max-width: $page-container-width;
     margin: $space-md auto 0 auto;
 
     >* {
       margin-top: 0;
     }
+  }
+}
+
+.title-section.images-grid {
+  .title-section__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-column-gap: $space-md;
+
+    div {
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+}
+
+.title-section.images-grid.fill {
+  img {
+    object-fit: cover;
   }
 }
