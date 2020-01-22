@@ -22,7 +22,14 @@ footer {
     text-decoration: none;
     color: $color-super-light-gray;
     line-height: 0.2rem;
-    font-size: $font-size-sm;    
+    font-size: $font-size-sm;   
+    transition: 0.3s; 
+
+    &:hover {
+      color: $color-gray;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
     div {
       display: flex;
@@ -46,3 +53,5 @@ footer {
 .space {
   margin-left: $space-lg;
 }
+
+
