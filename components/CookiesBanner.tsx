@@ -7,12 +7,12 @@ function renderAccepted(onClose: () => void) {
     <div className="cookies-banner__inner">
       <div className="cookies-banner__content">
         <h3>Thank you for helping us improving our website!</h3>
-      </div>
-      <div className="cookies-banner__actions">
-        <button className="primary" onClick={onClose}>Close</button>
         <Link href="/cookies-policy">
           <a>More about our cookies policy</a>
         </Link>
+      </div>
+      <div className="cookies-banner__actions">
+        <button className="primary" onClick={onClose}>Close</button>
       </div>
     </div>
   )
