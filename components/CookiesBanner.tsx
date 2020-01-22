@@ -23,7 +23,7 @@ function renderDefault(onApprove: () => void, onDeny: () => void) {
     <div className="cookies-banner__inner">
       <div className="cookies-banner__content">
         <h3>Cookie helps us improve your experience.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div>
           <Link href="/cookies-policy">
             <a>More about our cookies policy</a>
@@ -31,8 +31,8 @@ function renderDefault(onApprove: () => void, onDeny: () => void) {
         </div>
       </div>
       <div className="cookies-banner__actions">
-        <button className="primary" onClick={onApprove}>Accept cookies</button>
-        <button className="secondary" onClick={onDeny}>No cookies</button>
+        <button className="primary" onClick={onApprove}>ACCEPT</button>
+        <button className="secondary" onClick={onDeny}>NO COOKIES</button>
       </div>
     </div>
   )
