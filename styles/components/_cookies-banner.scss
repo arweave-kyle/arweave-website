@@ -13,6 +13,7 @@
 
   a {
     font-size: $font-size-sm;
+    color: $color-black;
   }
 
   p {
@@ -45,10 +46,21 @@
   button {
     margin-top: 0;
     margin-right: $space-md;
+    transition: 0.3s;
   }
 
   @media screen and (max-width: 55rem) {
     max-width: none;
+  }
+}
+
+.secondary {
+  transition: 0.3s;
+  font-family: $font-family-mono;
+
+  &:hover {
+    background-color: $color-super-light-gray;
+    transition: 0.3s;
   }
 }
 
