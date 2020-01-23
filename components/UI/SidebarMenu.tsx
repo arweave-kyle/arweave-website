@@ -79,14 +79,7 @@ const technologyTreeData = [
     key: 'playground',
     label: 'playground',
     isNew: true,
-    nodes: [
-      {
-        key: 'playground-sub1',
-        label: 'Sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    url: '/playground'
   }
 ];
 

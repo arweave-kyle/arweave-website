@@ -59,6 +59,13 @@ $DEFAULT_PADDING: 0.75rem;
   }
 }
 
+.rstm-tree-item--active[style="padding-left: 2.75rem;"] {
+  &:before {
+    left: 1.35rem;
+    top: 1.5rem;
+  }
+}
+
 .tree-item-container.header .rstm-tree-item {
   padding: 0.75rem 1rem;
 

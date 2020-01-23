@@ -1,7 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { NextPage } from 'next'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 import Layout from '../components/UI/Layout'
+
+try {
+  require('codemirror/lib/codemirror.css')
+  require('codemirror/theme/material.css')
+  require('codemirror/mode/htmlmixed/htmlmixed.js')
+} catch (e) {
+  console.error(e);
+}
 
 const codePlaceholder = `<!DOCTYPE html>
 <html lang="en">
@@ -16,43 +24,62 @@ const codePlaceholder = `<!DOCTYPE html>
 </body>
 </html>
 `
+
 const Playground: NextPage = () => {
-  const [isReady, setIsReady] = useState(false)
   const [code, setCode] = useState(codePlaceholder)
+  const [isCompling, setIsCompling] = useState(false)
+  const [isDeployed, setIsDeployed] = useState(false)
 
-  useEffect(() => {
-    setIsReady(true);
-  }, [])
+  function onDeploy() {
+    setIsCompling(true)
+    setIsDeployed(false)
 
-  // use stub to load extra libs, to ensure they are only loaded on client side
-  const CodeEditor = () => {
-    if (typeof window !== 'undefined') {
-      require('codemirror/lib/codemirror.css')
-      require('codemirror/theme/material.css')
-      require('codemirror/mode/htmlmixed/htmlmixed.js')
-    }
-
-    return null
+    setTimeout(() => { setIsCompling(false), setIsDeployed(true) }, 2000 );
   }
 
   return (
     <Layout className="code-playground">
       <div className="code-playground__inner">
-        <h1>code playground</h1>
-        {isReady && <CodeEditor />}
-        {isReady && <CodeMirror
+        <div className="header">
+          <h1>code playground</h1>
+          <button onClick={onDeploy}>
+            <div className="arrow-right" />Deploy
+          </button>
+        </div>
+        <CodeMirror
           value={code}
           options={{
             mode: 'htmlmixed',
             theme: 'material',
-            lineNumbers: true
+            lineNumbers: true,
+            autofocus: true,
+            tabSize: 2
           }}
           onBeforeChange={(editor, data, value) => {
             setCode(value);
           }}
-          onChange={(editor, data, value) => {
-          }}
-        />}
+        />
+        <hr />
+        <div className="console-header">
+          <h4>console</h4>
+          <div className="statistic">
+            {!isDeployed && <p>file size: -</p>}
+            {!isDeployed && <p>price: -</p>}
+            {isDeployed && <p>file size: 10kb</p>}
+            {isDeployed && <p>price: 0.003AR</p>}
+          </div>
+        </div>
+        <ul className="console">
+          {!isCompling && !isDeployed && <li/>}
+          {!isCompling && !isDeployed && <li/>}
+          {isCompling && <li>your code is deploying...</li>}
+          {isCompling && <li/>}
+          {isDeployed &&<li>your code is deployed here <span className="yellow">https://arweave.net/:id</span></li>}
+          {isDeployed && <li><span className="comment">// wait few minutes before clicking the link</span></li>}
+          <li/>
+          <li/>
+          <li/>
+        </ul>
       </div>
     </Layout>
   )

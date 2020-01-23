@@ -5,12 +5,12 @@ $sizebar-width: 22rem;
 
   width: 0;
   margin: 0;
-  z-index: 1;
+  z-index: 11;
 
   nav {
     position: fixed;
 
-    z-index: 1;
+    z-index: 11;
     width: 0;
 
     background: white;
@@ -63,7 +63,7 @@ $sizebar-width: 22rem;
 
   @include media-screen-small {
     nav {
-      z-index: 0;
+      z-index: 10;
     }
 
     .close-icon {
