@@ -32,14 +32,12 @@
     }
   }
 
-  .react-codemirror2 {
-    .CodeMirror {
-      border: 1px solid #eee;
-      height: 20rem;
+  .CodeMirror {
+    border: 1px solid #eee;
+    height: 20rem;
 
-      .CodeMirror-sizer {
-        height: 20rem;
-      }
+    .CodeMirror-sizer {
+      height: 20rem;
     }
 
     * {
@@ -48,8 +46,6 @@
       }
     }
   }
-
-
 
   .console-header {
     display: flex;

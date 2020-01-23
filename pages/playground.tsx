@@ -8,7 +8,6 @@ try {
   require('codemirror/theme/material.css')
   require('codemirror/mode/htmlmixed/htmlmixed.js')
 } catch (e) {
-  console.error(e);
 }
 
 const codePlaceholder = `<!DOCTYPE html>
@@ -46,19 +45,21 @@ const Playground: NextPage = () => {
             <div className="arrow-right" />Deploy
           </button>
         </div>
-        <CodeMirror
-          value={code}
-          options={{
-            mode: 'htmlmixed',
-            theme: 'material',
-            lineNumbers: true,
-            autofocus: true,
-            tabSize: 2
-          }}
-          onBeforeChange={(editor, data, value) => {
-            setCode(value);
-          }}
-        />
+        <div className="editor-container">
+          <CodeMirror
+            value={code}
+            options={{
+              mode: 'htmlmixed',
+              theme: 'material',
+              lineNumbers: true,
+              autofocus: true,
+              tabSize: 2
+            }}
+            onBeforeChange={(editor, data, value) => {
+              setCode(value);
+            }}
+          />
+        </div>
         <hr />
         <div className="console-header">
           <h4>console</h4>
