@@ -7,13 +7,15 @@ import CookiesBanner from '../CookiesBanner'
 
 type Props = {
   title?: string,
-  desc?: string
+  desc?: string,
+  className?: string
 }
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
   title = 'arweave',
-  desc = 'arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.'
+  desc = 'arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.',
+  className = ""
 }) => {
 
   return (
@@ -30,7 +32,7 @@ const Layout: React.FunctionComponent<Props> = ({
         <Sidebar />
         <div className="page">
           <NavBar />
-          <div className="page__content">
+          <div className={`page__content ${className}`}>
             {children}
           </div>
         </div>

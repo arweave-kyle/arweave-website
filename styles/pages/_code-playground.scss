@@ -1,0 +1,24 @@
+.code-playground {
+  background: $color-text-black;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .react-codemirror2 {
+    * {
+      +* {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+  }
+
+  &__inner {
+    padding: $space-md;
+  }
+}
