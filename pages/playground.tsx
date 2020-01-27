@@ -53,7 +53,9 @@ const Playground: NextPage = () => {
               theme: 'material',
               lineNumbers: true,
               autofocus: true,
-              tabSize: 2
+              tabSize: 2,
+              showCursorWhenSelecting: true,
+              cursorHeight: 0.85
             }}
             onBeforeChange={(editor, data, value) => {
               setCode(value);
