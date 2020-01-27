@@ -2,7 +2,7 @@
   padding: $space-lg 0;
 
   @include media-screen-small {
-    padding: $space-md 0;
+    padding: $space-xs 0;
   }
 
   h1 {
@@ -16,7 +16,7 @@
   }
 
   a.btn {
-    margin-top: $space-lg;
+    margin-top: $space-md;
     max-width: 20rem;
     transition: 0.3s;
   }
@@ -64,6 +64,11 @@
     p {
       max-width: none;
     }
+    @include media-screen-small {
+      padding: $space-md;
+      padding-top: $space-lg;
+      padding-bottom: $space-lg;    
+    }
   }
 
   &__content.right {
@@ -80,6 +85,11 @@
 
     p {
       max-width: none;
+    }
+    @include media-screen-small {
+      padding: $space-md;
+      padding-top: $space-lg;
+      padding-bottom: $space-lg;
     }
   }
 }
