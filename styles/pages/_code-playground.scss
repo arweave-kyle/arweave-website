@@ -23,12 +23,22 @@
       margin-top: 0;
       padding: $space-xs $space-sm;
 
+      font-family: $font-family-mono;
+      transition: 0.3s;
+      border-radius: $border-radius-sm;
+
+      &:hover {
+        background-color: $color-light-gray;
+        transition: 0.3s;
+      }
+
       div.arrow-right {
         margin-right: $space-xs;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
-        border-left: 10px solid black;
+        border-left: 10px solid $color-black;
       }
+
     }
   }
 
@@ -56,6 +66,7 @@
 
       p {
         margin-top: 0;
+        font-size: $font-size-sm;
       }
     }
   }
@@ -80,5 +91,6 @@
     span.yellow {
       color: $color-text-yellow;
     }
+
   }
 }
