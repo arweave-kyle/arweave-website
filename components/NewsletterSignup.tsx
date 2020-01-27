@@ -14,7 +14,7 @@ const NewsletterSignup: React.FunctionComponent = ({
         <h1>Stay up to date with arweave</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
         <form onSubmit={onSubmit}>
-          <input type="email" placeholder="enter your email" />
+          <input type="email" placeholder="enter email" />
           <button className="primary" type="submit" >Subscribe</button>
         </form>
       </div>

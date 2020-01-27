@@ -16,7 +16,7 @@ const Footer: React.FunctionComponent = () => (
         </div>
         <div className="footer__section space">
           <h4>get started</h4>
-          <div className="links">
+          <div className="links space_more">
             <a>get free token</a>
             <a>start archiving</a>
             <a>start mining</a>
@@ -26,7 +26,7 @@ const Footer: React.FunctionComponent = () => (
         </div>
         <div className="footer__section space">
           <h4>documentation</h4>
-          <div className="links">
+          <div className="links space_more">
             <a>get free token</a>
             <a>start archiving</a>
             <a>start mining</a>

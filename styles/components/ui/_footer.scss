@@ -51,11 +51,15 @@ footer {
 }
 
 .space {
-  margin-left: $space-lg;
+  margin-left: $space-md;
 
     @include media-screen-small {
       margin-left: $space-sm;
   }
+}
+
+.space_more {
+  padding-top: 10px;
 }
 
 
