@@ -52,6 +52,10 @@ footer {
 
 .space {
   margin-left: $space-lg;
+
+    @include media-screen-small {
+      margin-left: $space-sm;
+  }
 }
 
 
