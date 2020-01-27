@@ -1,4 +1,4 @@
-$sizebar-width: 22rem;
+$sidebar-width: 22rem;
 
 .sidebar {
   transition: width $duration-short;
@@ -47,7 +47,7 @@ $sizebar-width: 22rem;
   &__content {
     margin-top: $navbar-height;
     transition: transform $duration-short;
-    width: $sizebar-width;
+    width: $sidebar-width;
 
     background: white;
 
@@ -103,10 +103,10 @@ $sizebar-width: 22rem;
 }
 
 .sidebar.open {
-  width: $sizebar-width;
+  width: $sidebar-width;
 
   nav {
-    width: $sizebar-width;
+    width: $sidebar-width;
   }
 
   @include media-screen-small {
