@@ -42,7 +42,7 @@ const Playground: NextPage = () => {
         <div className="header">
           <h1>code playground</h1>
           <button onClick={onDeploy}>
-            <div className="arrow-right" />Deploy
+            <div className="arrow-right" />DEPLOY
           </button>
         </div>
         <div className="editor-container">
