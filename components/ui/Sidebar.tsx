@@ -15,9 +15,11 @@ const Sidebar: React.FunctionComponent = () => {
         </div>
       </nav>
       <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
-        <div className="close-icon" onClick={() => setOpen(false)}>
-          <img src="/images/icons/close.svg" />
-          <span>{" "}close</span>
+        <div className="close-icon">
+          <div className="close-icon__inner" onClick={() => setOpen(false)}>
+            <img src="/images/icons/close.svg" />
+            <span>{" "}close</span>
+          </div>
         </div>
         <div className='sidebar__content__inner'>
           <SidebarMenu />

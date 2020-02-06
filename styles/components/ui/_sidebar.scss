@@ -39,11 +39,14 @@ $sidebar-width: 22rem;
   .close-icon {
     display: none;
 
-    width: max-content;
-    margin-left: auto;
-    padding: $space-sm;
-    text-align: right;
-    cursor: pointer;
+    z-index: 1;
+    background: white;
+
+    &__inner {
+      padding: $space-md;
+      float: right;
+      cursor: pointer;
+    }
   }
 
   &__content {
@@ -58,7 +61,7 @@ $sidebar-width: 22rem;
       padding-top: $space-sm + $space-md;
 
       @include media-screen-small {
-        padding-top: $space-md;
+        padding-top: $navbar-height;
       }
     }
   }
@@ -73,9 +76,9 @@ $sidebar-width: 22rem;
     }
 
     .close-icon {
-      display: block;
-      padding-top: 25px;
-      padding-right: 20px;
+      position: fixed;
+      right: 0;
+      left: 0;
     }
 
     &__content {
@@ -99,13 +102,44 @@ $sidebar-width: 22rem;
 
     &__content.closed {
       transform: none;
-      // right: 200%;
       left: -100%;
+
+      .close-icon {
+        display: none;
+      }
     }
 
     &__content.open {
-      // right: 0;
       left: 0;
+
+      .close-icon {
+        display: block;
+
+        /** Register your custom effects  **/
+        @-webkit-keyframes fadeEffect {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeEffect {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        /* Fading effect takes 1 second */
+      }
     }
   }
 }
