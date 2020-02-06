@@ -1,5 +1,5 @@
 .menu-section {
-  h4 {
+  h5 {
     font-weight: 400;
     text-transform: uppercase;
     color: $color-text-gray;
@@ -12,6 +12,11 @@
 
 .rstm-tree-item {
   font-size: 16px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
 }

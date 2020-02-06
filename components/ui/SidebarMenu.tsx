@@ -8,18 +8,18 @@ const developmentTreeData = [
     nodes: [
       {
         key: 'mine-welcome',
-        label: 'Welcome to Arweave',
+        label: 'welcome to arweave',
         nodes: [],
         url: '/mine/welcome'
       }, {
         key: 'mine-about-us',
-        label: 'About us',
+        label: 'about us',
         nodes: [],
         url: '/mine/about'
       },
       {
         key: 'mine-Home',
-        label: 'Homepage',
+        label: 'homepage',
         nodes: [],
         url: '/'
       }
@@ -31,7 +31,7 @@ const developmentTreeData = [
     nodes: [
       {
         key: 'archive-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
@@ -43,7 +43,7 @@ const developmentTreeData = [
     nodes: [
       {
         key: 'deploy-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
@@ -58,18 +58,18 @@ const technologyTreeData = [
     nodes: [
       {
         key: 'wallet-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }, {
         key: 'wallet-sub2',
-        label: 'Sub header 2',
+        label: 'sub header 2',
         nodes: [],
         url: 'https://google.com'
       },
       {
         key: 'wallet-sub3',
-        label: 'Sub header 3',
+        label: 'sub header 3',
         nodes: [],
         url: 'https://google.com'
       }
@@ -91,12 +91,12 @@ const communityTreeData = [
     nodes: [
       {
         key: 'showcase-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }, {
         key: 'showcase-sub2',
-        label: 'Sub header 2',
+        label: 'sub header 2',
         nodes: [],
         url: 'https://google.com'
       }
@@ -108,7 +108,7 @@ const communityTreeData = [
     nodes: [
       {
         key: 'hackathon-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
@@ -121,7 +121,7 @@ const communityTreeData = [
     nodes: [
       {
         key: 'blog-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
@@ -136,7 +136,7 @@ const faqTreeData = [
     nodes: [
       {
         key: 'permaweb-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
@@ -148,7 +148,7 @@ const faqTreeData = [
     nodes: [
       {
         key: 'hackathon-sub1',
-        label: 'Sub header 1',
+        label: 'sub header 1',
         nodes: [],
         url: 'https://google.com'
       }
