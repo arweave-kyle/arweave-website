@@ -53,7 +53,7 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
 
   return (
     <div className="menu-section">
-      <h4>{name}</h4>
+      <h5>{name}</h5>
       <div className="tree-menu__container">
         <TreeMenu data={treeData}
           initialActiveKey={activeKey}

@@ -38,19 +38,15 @@ $DEFAULT_PADDING: 0.75rem;
 
   &--active {
     font-weight: bold;
+    text-decoration: underline;
+    text-decoration-style: dotted;
 
     &:before {
-      content: "";
+      content: "•";
       position: absolute;
       left: 3.2rem;
-      top: 1rem;
 
-      border: solid $color-black;
-      border-width: 0 3px 3px 0;
       display: inline-block;
-      padding: 3px;
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
     }
   }
 
@@ -75,15 +71,11 @@ $DEFAULT_PADDING: 0.75rem;
 
 .tree-item-container.new .rstm-tree-item {
   &:after {
-    content: "new";
-    border-radius: $border-radius-md;
+    content: "{new}";
     margin-left: $space-xs;
-    background: $color-blue;
-    color: white;
+    color: $color-dark-blue;
     font-size: $font-size-sm;
     font-weight: 400;
-    padding: $space-xxs $space-xs;
-    vertical-align: 50%;
   }
 }
 
