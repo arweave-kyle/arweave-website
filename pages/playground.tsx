@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NextPage } from 'next'
 import { Controlled as CodeMirror } from 'react-codemirror2'
-import Layout from '../components/UI/Layout'
+import Layout from '../components/base/Layout'
 
 try {
   require('codemirror/lib/codemirror.css')

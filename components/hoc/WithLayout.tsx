@@ -1,6 +1,6 @@
 import * as React from "react"
 import { NextComponentType } from "next"
-import Layout from "../UI/Layout"
+import Layout from "../base/Layout"
 
 type Props = {
   meta: object
