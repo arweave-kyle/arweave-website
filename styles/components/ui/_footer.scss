@@ -1,6 +1,27 @@
 footer {
-  background: $color-dark-gray;
-  padding: $space-lg $space-md;
+  background: transparent;
+  padding: $space-md;
+
+  .footer__content {
+    display: none;
+  }
+
+  .footer__content__mobile {
+    display: inline;
+  }
+
+  @include media-screen-large {
+    background: $color-dark-gray;
+    padding: $space-lg $space-md;
+
+    .footer__content {
+      display: grid;
+    }
+
+    .footer__content__mobile {
+      display: none;
+    }
+  }
 }
 
 .footer__inner {
@@ -13,6 +34,13 @@ footer {
   }
 }
 
+.footer__content__mobile {
+  p {
+    text-align: center;
+    color: $color-text-gray;
+  }
+}
+
 .footer__content {
   @include layout-grid($space-md*1.5);
 
@@ -22,8 +50,8 @@ footer {
     text-decoration: none;
     color: $color-super-light-gray;
     line-height: 0.2rem;
-    font-size: $font-size-sm;   
-    transition: 0.3s; 
+    font-size: $font-size-sm;
+    transition: 0.3s;
 
     &:hover {
       color: $color-gray;
@@ -53,13 +81,11 @@ footer {
 .space {
   margin-left: $space-md;
 
-    @include media-screen-small {
-      margin-left: $space-sm;
+  @include media-screen-small {
+    margin-left: $space-sm;
   }
 }
 
 .space_more {
   padding-top: 10px;
 }
-
-

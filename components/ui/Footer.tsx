@@ -63,6 +63,10 @@ const Footer: React.FunctionComponent = () => (
           </div>
         </div>
       </div>
+      <div className="footer__content__mobile">
+        <hr />
+        <p>© Copyrights 2020 Minimum Spanning Technologies Limited</p>
+      </div>
     </div>
   </footer>
 )
