@@ -1,0 +1,36 @@
+.page__content.tokens {
+  text-align: center;
+
+  .tokens__inner {
+    max-width: 80ch;
+    margin: auto;
+    margin-top: $space-xl;
+  }
+
+  h1 {
+    margin-bottom: $space-md;
+    font-size: $font-size-xxxl;
+  }
+
+  p {
+    margin: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    margin-right: $space-sm;
+  }
+
+  button {
+    max-width: 20rem;
+    margin: $space-md auto;
+  }
+}

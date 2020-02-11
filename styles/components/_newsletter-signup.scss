@@ -12,12 +12,15 @@
     display: flex;
 
     input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      padding: 0.3em 0.8em;
-      font-size: $font-size-md;
-
+      box-shadow: 0 6px $color-text-black;
+      border: $border-width-sm solid $color-text-black;
       border-radius: $border-radius-lg 0 0 $border-radius-lg;
+      box-sizing: border-box;
+      font: inherit;
+      font-size: $font-size-md;
+      padding: 0.3em 0.8em;
+      resize: vertical;
+      width: 100%;
     }
 
     button {
