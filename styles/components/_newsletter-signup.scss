@@ -6,6 +6,14 @@
     padding: $space-md;
     padding-top: $space-sm;
     margin: 0 auto;
+
+    @include media-screen-small {
+      text-align: left;
+    }
+    h1 {
+      font-size: $font-size-xxl;
+      line-height: $font-size-xxl * 1.2;
+    }
   }
 
   form {
