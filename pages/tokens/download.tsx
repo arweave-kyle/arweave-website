@@ -2,9 +2,8 @@ import { useState } from 'react'
 import { NextPage } from 'next'
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
-import { authorizeAndGetProfile } from "../../libs/auth0";
 
-const Tokens: NextPage = () => {
+const TokensDownload: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   function onCheckboxChange(evt: React.ChangeEvent<HTMLInputElement>) {
@@ -15,16 +14,16 @@ const Tokens: NextPage = () => {
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
 
-    Router.push("/tokens/process")
+    Router.push("/tokens/complete")
     // const response = await authorizeAndGetProfile("google");
   }
 
   return (
-    <Layout className="tokens">
+    <Layout className="tokens download">
       <div className="tokens__inner">
-        <h1>Store data on the permaweb for free</h1>
-        <p>You first need some Arweave tokens which we’d like to send you for free together with a wallet.</p>
-        <p>You'll be amazed how far it'll go!</p>
+        <h1>Download your key file</h1>
+        <p>Nobody (including the arweave project) can help you recover your wallet if the key file is lost.</p>
+        <p className="bold">So, remember to keep it safe!</p>
         <form onSubmit={onSubmit}>
           <label>
             <input
@@ -33,13 +32,13 @@ const Tokens: NextPage = () => {
               checked={isChecked}
               onChange={onCheckboxChange}
               required />
-            I understand and agree to the privacy policy.
+            I understand that I am responsible for my key file.
           </label>
-          <button className="primary" type="submit" >sign up with Google</button>
+          <button className="primary" type="submit" >download key</button>
         </form>
       </div>
     </Layout>
   )
 };
 
-export default Tokens;
+export default TokensDownload;

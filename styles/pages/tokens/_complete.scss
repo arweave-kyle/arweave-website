@@ -1,0 +1,19 @@
+.tokens.complete {
+  h1 {
+    font-size: $font-size-xxl;
+  }
+
+  p {
+    margin-top: $space-md;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: center;
+
+    a {
+      margin-top: 0;
+      margin-left: $space-md;
+    }
+  }
+}

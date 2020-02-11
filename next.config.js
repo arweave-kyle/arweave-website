@@ -7,7 +7,10 @@ const withMDX = require('@next/mdx')({
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'tsx', 'mdx'],
-  env: {}
+  env: {
+    AUTH0_DOMAIN: "auth.arweave.org",
+    AUTH0_CLIENT_ID: "zrl99vvZ97hiNQ5zsI5oofqk39DLN9Ca"
+  }
 };
 
 module.exports = withSass(withCSS(withMDX(nextConfig)));
