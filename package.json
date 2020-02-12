@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "start": "next -p 5000",
+    "start": "next -p 9001",
     "export": "next build && next export",
     "deploy:static": "now out -A now.json --prod"
   },
@@ -14,18 +14,22 @@
     "@types/aos": "^3.0.3",
     "@types/auth0-js": "^9.12.3",
     "@types/codemirror": "0.0.83",
+    "@types/fingerprintjs2": "^2.0.0",
     "@types/js-cookie": "^2.2.4",
+    "@types/react-google-recaptcha": "^1.1.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "aos": "^3.0.0-beta.6",
     "auth0-js": "^9.12.2",
     "codemirror": "^5.51.0",
+    "fingerprintjs2": "^2.1.0",
     "js-cookie": "^2.2.1",
     "next": "^9.1.7",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-codemirror2": "^6.0.0",
     "react-dom": "^16.12.0",
+    "react-google-recaptcha": "^2.0.1",
     "react-simple-tree-menu": "^1.1.14"
   },
   "devDependencies": {

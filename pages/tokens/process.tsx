@@ -1,11 +1,29 @@
 import { useState, useEffect } from 'react'
 import { NextPage } from 'next'
+import Fingerprint2 from 'fingerprintjs2';
 import Layout from '../../components/ui/Layout'
 
 const TokensProcess: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [d, setD] = useState("");
 
   useEffect(() => {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const jsonB64 = urlParams.get('data') || "";
+      const jsonStr = atob(jsonB64);
+      const authResponse = JSON.parse(jsonStr);
+      console.log(authResponse);
+
+      Fingerprint2.get(function (components) {
+        const values = components.map(function (component) { return component.value });
+        const murmur = Fingerprint2.x64hash128(values.join(''), 31);
+        setD(murmur);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+
     setTimeout(() => { setIsLoading(false) }, 3000);
   }, []);
 

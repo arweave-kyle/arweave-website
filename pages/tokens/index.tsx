@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { createRef, useState, useEffect } from 'react'
 import { NextPage } from 'next'
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
+import ReCAPTCHA from "react-google-recaptcha";
 import { authorizeAndGetProfile } from "../../libs/auth0";
 
 const Tokens: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const recaptchaRef = createRef<ReCAPTCHA>();
+
+  useEffect(() => {
+    const recaptchaComp = recaptchaRef.current;
+    if (recaptchaComp) recaptchaComp.execute();
+  }, [])
 
   function onCheckboxChange(evt: React.ChangeEvent<HTMLInputElement>) {
     const target = evt.target;
@@ -15,8 +22,16 @@ const Tokens: NextPage = () => {
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
 
-    Router.push("/tokens/process")
-    // const response = await authorizeAndGetProfile("google");
+    const authResponse = await authorizeAndGetProfile("google");
+
+    const recaptchaComp = recaptchaRef.current!;
+    authResponse.captchaToken = recaptchaComp.getValue() || "";
+
+    console.log(authResponse);
+    const authResponseJsonStr = JSON.stringify(authResponse);
+    const authResponseJsonB64 = btoa(authResponseJsonStr);
+    console.log(authResponseJsonB64);
+    Router.push(`/tokens/process?data=${authResponseJsonB64}`)
   }
 
   return (
@@ -36,6 +51,11 @@ const Tokens: NextPage = () => {
             I understand and agree to the privacy policy.
           </label>
           <button className="primary" type="submit" >sign up with Google</button>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey={process.env.CAPTCHA_KEY!}
+          />
         </form>
       </div>
     </Layout>

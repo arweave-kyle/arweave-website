@@ -59,7 +59,6 @@ async function authorize(connection: string): Promise<Auth0Response> {
         if (error) {
           reject(error);
         }
-        console.log(response);
         resolve(response);
       });
   });
