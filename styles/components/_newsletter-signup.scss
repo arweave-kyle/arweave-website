@@ -4,7 +4,6 @@
   &__inner {
     max-width: 50rem;
     padding: $space-md;
-    padding-top: $space-sm;
     margin: 0 auto;
 
     @include media-screen-small {
@@ -29,16 +28,26 @@
       padding: 0.3em 0.8em;
       resize: vertical;
       width: 100%;
+
+      @include media-screen-small {
+        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
+      }
     }
 
     button {
       margin-top: 0;
       text-transform: uppercase;
       font-size: $font-size-md;
+      font-weight: 400;
       transition: 0.3s;
       cursor: pointer;
 
       border-radius: 0 $border-radius-lg $border-radius-lg 0;
+
+      @include media-screen-small {
+        margin-top: $space-md;
+        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
+      }
     }
 
     button:hover {
