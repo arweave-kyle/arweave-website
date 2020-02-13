@@ -1,8 +1,9 @@
 // We're aliasing this as d (d = device id) simply to obfuscate it. Annoying, yeah.
-import * as fpjs from 'fingerprintjs2';
+import fpjs from 'fingerprintjs2';
 
 //@ts-ignore
-let idleCallback = window.requestIdleCallback;
+
+let idleCallback = typeof window !== 'undefined' ? window.requestIdleCallback : null;
 
 let deviceId = "";
 
