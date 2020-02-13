@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Fingerprint2 from 'fingerprintjs2';
 import Layout from '../../components/ui/Layout'
 
-const TokensProcess: NextPage = () => {
+const WalletProcess: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [d, setD] = useState("");
 
@@ -51,4 +51,4 @@ const TokensProcess: NextPage = () => {
   )
 };
 
-export default TokensProcess;
+export default WalletProcess;

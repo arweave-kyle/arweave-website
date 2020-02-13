@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
 
-const TokensComplete: NextPage = () => {
+const WalletComplete: NextPage = () => {
   return (
     <Layout className="tokens complete">
       <div className="tokens__inner">
@@ -19,4 +19,4 @@ const TokensComplete: NextPage = () => {
   )
 };
 
-export default TokensComplete;
+export default WalletComplete;

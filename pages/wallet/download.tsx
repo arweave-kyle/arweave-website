@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
 
-const TokensDownload: NextPage = () => {
+const WalletDownload: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   function onCheckboxChange(evt: React.ChangeEvent<HTMLInputElement>) {
@@ -14,8 +14,7 @@ const TokensDownload: NextPage = () => {
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
 
-    Router.push("/tokens/complete")
-    // const response = await authorizeAndGetProfile("google");
+    Router.push("/wallet/complete")
   }
 
   return (
@@ -41,4 +40,4 @@ const TokensDownload: NextPage = () => {
   )
 };
 
-export default TokensDownload;
+export default WalletDownload;

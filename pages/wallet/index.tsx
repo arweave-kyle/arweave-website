@@ -5,7 +5,7 @@ import Layout from '../../components/ui/Layout'
 import ReCAPTCHA from "react-google-recaptcha";
 import { authorizeAndGetProfile } from "../../libs/auth0";
 
-const Tokens: NextPage = () => {
+const Wallet: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
   const recaptchaRef = createRef<ReCAPTCHA>();
 
@@ -31,7 +31,7 @@ const Tokens: NextPage = () => {
     const authResponseJsonStr = JSON.stringify(authResponse);
     const authResponseJsonB64 = btoa(authResponseJsonStr);
     console.log(authResponseJsonB64);
-    Router.push(`/tokens/process?data=${authResponseJsonB64}`)
+    Router.push(`/wallet/process?data=${authResponseJsonB64}`)
   }
 
   return (
@@ -62,4 +62,4 @@ const Tokens: NextPage = () => {
   )
 };
 
-export default Tokens;
+export default Wallet;
