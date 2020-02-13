@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NextPage } from 'next'
+import { saveAs } from 'file-saver';
+import { TokenApi } from "../../libs/token-api";
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
 
 const WalletDownload: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [token, setToken] = useState("");
+  const tokenApi = new TokenApi();
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token') || "";
+    setToken(token);
+    console.log(token);
+  }, []);
 
   function onCheckboxChange(evt: React.ChangeEvent<HTMLInputElement>) {
     const target = evt.target;
@@ -14,7 +25,19 @@ const WalletDownload: NextPage = () => {
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
 
-    Router.push("/wallet/complete")
+    try {
+      const response = await tokenApi.redeem(token);
+      console.log(response);
+      const wallet = response.data.data.wallet;
+      const blob = new Blob([wallet.jwk], {
+        type: "text/json;charset=utf-8;"
+      });
+      saveAs(blob, `arweave-keyfile-${wallet.address}.json`);
+      Router.push("/wallet/complete")
+    } catch (err) {
+      console.log(err);
+      // Todo: handle error
+    }
   }
 
   return (
