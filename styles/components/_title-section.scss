@@ -19,7 +19,7 @@
     -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);*/
     background-color: whitesmoke;
-    padding: $space-lg * 1.5;
+    padding: $space-md * 1.5;
 
     @include media-screen-small {
        padding: $space-lg;
@@ -32,7 +32,7 @@
     align-items: center;
 
     // max-width: $page-container-width;
-    margin: $space-md auto 0 auto;
+    margin: $space-xs auto 0 auto;
 
     >* {
       margin-top: 0;

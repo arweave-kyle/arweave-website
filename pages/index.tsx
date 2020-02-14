@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         action="GO TO THAT PAGE" />
       <NewsletterSignup />
-      <TitleSection title="Friends and partners" className="images-grid">
+      <TitleSection className="images-grid">
         <div><img src="https://via.placeholder.com/200x80.png" /></div>
         <div><img src="https://via.placeholder.com/100x80.png" /></div>
         <div><img src="https://via.placeholder.com/100x80.png" /></div>
