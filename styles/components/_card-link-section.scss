@@ -8,6 +8,7 @@
   h1 {
     font-size: $font-size-xxxl;
     line-height: $font-size-xxxl * 1.5;
+    color: $color-text-black;
 
     @include media-screen-small {
       font-size: $font-size-xxl;
@@ -27,21 +28,23 @@
   }
 
   &__inner {
-    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 8px 8px 0px 0px #222326;
+    -moz-box-shadow: 8px 8px 0px 0px #222326;
+    box-shadow: 8px 8px 0px 0px #222326;
+    border-radius: 5px;
 
     background: white;
   }
 
   &__content.center {
     max-width: 60ch;
-    padding: $space-xl $space-md;
+    padding: $space-lg $space-md;
     margin: auto;
 
     h1,
     p {
       text-align: center;
+      color: $color-text-black
     }
 
     h1 {
