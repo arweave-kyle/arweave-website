@@ -3,11 +3,14 @@ import { NextPage } from 'next'
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
 import ReCAPTCHA from "react-google-recaptcha";
+import ReactTooltip from "react-tooltip"
 import { authorizeAndGetProfile } from "../../libs/auth0";
 
 const Wallet: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [validationMessage, setValidationMessage] = useState("");
   const recaptchaRef = createRef<ReCAPTCHA>();
+  const checkboxLabelRef = createRef<HTMLLabelElement>();
 
   useEffect(() => {
     const recaptchaComp = recaptchaRef.current;
@@ -19,18 +22,26 @@ const Wallet: NextPage = () => {
     setIsChecked(target.checked);
   }
 
+  function onCheckboxFocus(evt: React.FocusEvent<HTMLInputElement>) {
+    ReactTooltip.hide(checkboxLabelRef.current!);
+  }
+
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
 
-    const authResponse = await authorizeAndGetProfile("google");
+    if (!isChecked) {
+      setValidationMessage("Terms of service must be agreed to continue.");
+      ReactTooltip.show(checkboxLabelRef.current!);
+      return;
+    }
 
+    const authResponse = await authorizeAndGetProfile("google");
     const recaptchaComp = recaptchaRef.current!;
     authResponse.captchaToken = recaptchaComp.getValue() || "";
 
     console.log(authResponse);
     const authResponseJsonStr = JSON.stringify(authResponse);
     const authResponseJsonB64 = btoa(authResponseJsonStr);
-    console.log(authResponseJsonB64);
     Router.push(`/wallet/process?data=${authResponseJsonB64}`)
   }
 
@@ -40,14 +51,17 @@ const Wallet: NextPage = () => {
         <h1>Store data on the permaweb for free</h1>
         <p>You first need some Arweave tokens which we’d like to send you for free together with a wallet.</p>
         <p>You'll be amazed how far it'll go!</p>
-        <form onSubmit={onSubmit}>
-          <label>
+        <form onSubmit={onSubmit} noValidate>
+          <label data-tip ref={checkboxLabelRef}>
             <input
-              name="isGoing"
               type="checkbox"
               checked={isChecked}
               onChange={onCheckboxChange}
-              required />
+              onFocus={onCheckboxFocus}
+            />
+            <ReactTooltip place="top" type="error" effect="solid" event="no-event" data-offset="{'left': 200}">
+              <span>{validationMessage}</span>
+            </ReactTooltip>
             I understand and agree to the privacy policy.
           </label>
           <button className="primary" type="submit" >sign up with Google</button>
