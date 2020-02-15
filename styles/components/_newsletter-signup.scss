@@ -2,51 +2,62 @@
   text-align: center;
 
   &__inner {
+    padding: $space-lg;
+    background: white;
+
+    -webkit-box-shadow: 8px 0px 0px #222326;
+    -moz-box-shadow: 8px 8px 0px 0px #222326;
+    box-shadow: 8px 8px 0px 0px #222326;
+    border-radius: 5px;
+
+    @include media-screen-small {
+      padding: $space-md;
+    }
+  }
+
+  &__content {
     max-width: 50rem;
-    padding: $space-md;
     margin: 0 auto;
 
     @include media-screen-small {
       text-align: left;
     }
+
     h1 {
       font-size: $font-size-xxl;
       line-height: $font-size-xxl * 1.2;
     }
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   form {
-    display: flex;
-
     input {
       box-shadow: 0 6px $color-text-black;
       border: $border-width-sm solid $color-text-black;
-      border-radius: $border-radius-lg 0 0 $border-radius-lg;
+      border-radius: $border-radius-lg;
       box-sizing: border-box;
       font: inherit;
       font-size: $font-size-md;
       padding: 0.3em 0.8em;
       resize: vertical;
       width: 100%;
-
-      @include media-screen-small {
-        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
-      }
     }
 
     button {
-      margin-top: 0;
       text-transform: uppercase;
       font-size: $font-size-md;
       font-weight: 400;
       transition: 0.3s;
       cursor: pointer;
 
-      border-radius: 0 $border-radius-lg $border-radius-lg 0;
+      border-radius: $border-radius-lg;
 
       @include media-screen-small {
-        margin-top: $space-md;
-        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
+        width: 100%;
       }
     }
 
