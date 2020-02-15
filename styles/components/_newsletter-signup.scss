@@ -35,10 +35,12 @@
   }
 
   form {
+    display: flex;
+
     input {
       box-shadow: 0 6px $color-text-black;
       border: $border-width-sm solid $color-text-black;
-      border-radius: $border-radius-lg;
+      border-radius: $border-radius-lg 0 0 $border-radius-lg;
       box-sizing: border-box;
       font: inherit;
       font-size: $font-size-md;
@@ -48,21 +50,32 @@
     }
 
     button {
+      margin-top: 0;
       text-transform: uppercase;
       font-size: $font-size-md;
       font-weight: 400;
       transition: 0.3s;
       cursor: pointer;
 
-      border-radius: $border-radius-lg;
-
-      @include media-screen-small {
-        width: 100%;
-      }
+      border-radius: 0 $border-radius-lg $border-radius-lg 0;
     }
 
     button:hover {
       transition: 0.3s;
+    }
+
+    @include media-screen-small {
+      display: block;
+
+      input {
+        border-radius: $border-radius-lg
+      }
+
+      button {
+        width: 100%;
+        margin-top: $space-md;
+        border-radius: $border-radius-lg;
+      }
     }
   }
 }

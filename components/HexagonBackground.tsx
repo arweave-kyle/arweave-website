@@ -2,7 +2,7 @@ import *  as React from "react"
 
 function getImagePaths() {
   const images = []
-  for (let i = 1; i <= 120; i++) {
+  for (let i = 1; i <= 150; i++) {
     images.push(`/images/hexagonbg/${i}.png`)
   }
   return images
