@@ -57,9 +57,8 @@ const Wallet: NextPage = () => {
               type="checkbox"
               checked={isChecked}
               onChange={onCheckboxChange}
-              onFocus={onCheckboxFocus}
-            />
-            <ReactTooltip place="top" type="error" effect="solid" event="no-event" data-offset="{'left': 200}">
+              onFocus={onCheckboxFocus} />
+            <ReactTooltip place="top" type="error" effect="solid" event="no-event">
               <span>{validationMessage}</span>
             </ReactTooltip>
             I understand and agree to the privacy policy.

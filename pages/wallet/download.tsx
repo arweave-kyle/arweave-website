@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react'
+import { createRef, useState, useEffect } from 'react'
 import { NextPage } from 'next'
 import { saveAs } from 'file-saver';
 import { TokenApi } from "../../libs/token-api";
 import Router from 'next/router'
 import Layout from '../../components/ui/Layout'
+import ReactTooltip from "react-tooltip"
 
 const WalletDownload: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [token, setToken] = useState("");
+  const [validationMessage, setValidationMessage] = useState("");
   const tokenApi = new TokenApi();
+  const checkboxLabelRef = createRef<HTMLLabelElement>();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -17,6 +20,10 @@ const WalletDownload: NextPage = () => {
     console.log(token);
   }, []);
 
+  function onCheckboxFocus(evt: React.FocusEvent<HTMLInputElement>) {
+    ReactTooltip.hide(checkboxLabelRef.current!);
+  }
+
   function onCheckboxChange(evt: React.ChangeEvent<HTMLInputElement>) {
     const target = evt.target;
     setIsChecked(target.checked);
@@ -24,6 +31,12 @@ const WalletDownload: NextPage = () => {
 
   async function onSubmit(evt: React.FormEvent) {
     if (evt) evt.preventDefault();
+
+    if (!isChecked) {
+      setValidationMessage("Terms of service must be agreed to continue.");
+      ReactTooltip.show(checkboxLabelRef.current!);
+      return;
+    }
 
     try {
       const response = await tokenApi.redeem(token);
@@ -46,14 +59,17 @@ const WalletDownload: NextPage = () => {
         <h1>Download your key file</h1>
         <p>Nobody (including the arweave project) can help you recover your wallet if the key file is lost.</p>
         <p className="bold">So, remember to keep it safe!</p>
-        <form onSubmit={onSubmit}>
-          <label>
+        <form onSubmit={onSubmit} noValidate>
+          <label data-tip ref={checkboxLabelRef}>
             <input
               name="isGoing"
               type="checkbox"
               checked={isChecked}
               onChange={onCheckboxChange}
-              required />
+              onFocus={onCheckboxFocus} />
+            <ReactTooltip place="top" type="error" effect="solid" event="no-event">
+              <span>{validationMessage}</span>
+            </ReactTooltip>
             I understand that I am responsible for my key file.
           </label>
           <button className="primary" type="submit" >download key</button>
