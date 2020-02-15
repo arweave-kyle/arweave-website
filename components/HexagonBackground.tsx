@@ -2,7 +2,7 @@ import *  as React from "react"
 
 function getImagePaths() {
   const images = []
-  for (let i = 1; i <= 161; i++) {
+  for (let i = 1; i <= 120; i++) {
     images.push(`/images/hexagonbg/${i}.png`)
   }
   return images
@@ -14,10 +14,10 @@ const HexagonBackground: React.FunctionComponent = () => {
   React.useEffect(() => {
     // Fade out while scrolling
     window.onscroll = () => {
-      // const newScrollHeight = Math.ceil(window.scrollY);
-      // const newOpacity = Math.max(1 - newScrollHeight / 1500, 0).toFixed(2)
-      // const newOpacityValue = parseFloat(newOpacity);
-      // setOpacity(newOpacityValue)
+      const newScrollHeight = Math.ceil(window.scrollY);
+      const newOpacity = Math.max(1 - newScrollHeight / 1500, 0).toFixed(2)
+      const newOpacityValue = parseFloat(newOpacity);
+      setOpacity(newOpacityValue)
     }
   }, []);
 
