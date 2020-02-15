@@ -1,0 +1,20 @@
+.page__content.error404 {
+  text-align: center;
+
+  h1 {
+    margin-top: $space-xl;
+    font-size: 10rem;
+    line-height: 8rem;
+  }
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    max-width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
