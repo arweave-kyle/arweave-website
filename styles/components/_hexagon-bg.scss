@@ -24,8 +24,6 @@
   list-style-type: none;
   position: relative;
   float: left;
-  width: 10%;
-  padding: 0 0 11.5470053838% 0;
   margin-top: $space-md;
 
   -o-transform: rotate(-60deg) skewY(30deg);
@@ -35,11 +33,6 @@
   transform: rotate(-60deg) skewY(30deg);
   overflow: hidden;
   visibility: hidden;
-
-  @include media-screen-small {
-    width: 18%;
-    padding: 0 0 20.7846096908% 0;
-  }
 }
 
 .hexagonbg-grid li * {
@@ -61,59 +54,100 @@
   overflow: hidden;
 }
 
-.hexagonbg-grid li:nth-child(1n+1) {
-  margin: 0.5%;
+// ***** Fade in effect *****
+@keyframes hexagonFadein {
+  from {
+    opacity: 0;
+  }
 
-  @include media-screen-small {
-    margin: 1%;
+  to {
+    opacity: 1;
   }
 }
+
+@-webkit-keyframes hexagonFadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hexagonbg-grid li .hexagon {
+  @for $i from 0 through 100 {
+    .tile-#{$i} {
+      $random-delay: random(20) / 10 * 1s;
+
+      -webkit-animation: hexagonFadein;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-delay: $random-delay;
+
+      animation: hexagonFadein;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: $random-delay;
+
+      opacity: 0;
+    }
+  }
+}
+
+// ***** End fade in effect *****
 
 /* (col*2)n+(maxCol+1) */
-.hexagonbg-grid li:nth-child(18n+10),
-.hexagonbg-grid li:nth-child(18n+11),
-.hexagonbg-grid li:nth-child(18n+12),
-.hexagonbg-grid li:nth-child(18n+13),
-.hexagonbg-grid li:nth-child(18n+14),
-.hexagonbg-grid li:nth-child(18n+15),
-.hexagonbg-grid li:nth-child(18n+16),
-.hexagonbg-grid li:nth-child(18n+17),
-.hexagonbg-grid li:nth-child(18n+18) {
-  margin-top: -2.5%;
-  margin-bottom: -2.5%;
-  -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+.hexagonbg-grid.desktop {
 
-  @include media-screen-small {
-    margin-top: 0;
-    margin-bottom: 0;
+  li {
+    width: 10%;
+    padding: 0 0 11.5470053838% 0;
+  }
 
-    -o-transform: rotate(-60deg) skewY(30deg);
-    -moz-transform: rotate(-60deg) skewY(30deg);
-    -webkit-transform: rotate(-60deg) skewY(30deg);
-    -ms-transform: rotate(-60deg) skewY(30deg);
-    transform: rotate(-60deg) skewY(30deg);
+  li:nth-child(1n+1) {
+    margin: 0.5%;
+  }
+
+  li:nth-child(18n+10),
+  li:nth-child(18n+11),
+  li:nth-child(18n+12),
+  li:nth-child(18n+13),
+  li:nth-child(18n+14),
+  li:nth-child(18n+15),
+  li:nth-child(18n+16),
+  li:nth-child(18n+17),
+  li:nth-child(18n+18) {
+    margin-top: -2.5%;
+    margin-bottom: -2.5%;
+    -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+
+  li:nth-child(20n+11) {
+    margin-left: 0.9%;
   }
 }
 
-.hexagonbg-grid li:nth-child(20n+11) {
-  margin-left: 0.9%;
+.hexagonbg-grid.mobile {
 
-  @include media-screen-small {
-    margin-left: 0
+  li {
+    width: 18%;
+    padding: 0 0 20.7846096908% 0;
   }
-}
 
-@include media-screen-small {
+  li:nth-child(1n+1) {
+    margin: 1%;
+  }
 
-  .hexagonbg-grid li:nth-child(10n+6),
-  .hexagonbg-grid li:nth-child(10n+7),
-  .hexagonbg-grid li:nth-child(10n+8),
-  .hexagonbg-grid li:nth-child(10n+9),
-  .hexagonbg-grid li:nth-child(10n+10) {
+  li:nth-child(10n+6),
+  li:nth-child(10n+7),
+  li:nth-child(10n+8),
+  li:nth-child(10n+9),
+  li:nth-child(10n+10) {
     margin-top: -3.5%;
     margin-bottom: -3.5%;
     -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -123,7 +157,7 @@
     transform: translateX(50%) rotate(-60deg) skewY(30deg);
   }
 
-  .hexagonbg-grid li:nth-child(10n+6) {
+  li:nth-child(10n+6) {
     margin-left: 1%;
   }
 }

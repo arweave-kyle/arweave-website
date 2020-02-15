@@ -2,16 +2,35 @@
   text-align: center;
 
   &__inner {
+    padding: $space-lg;
+    background: white;
+
+    -webkit-box-shadow: 8px 0px 0px #222326;
+    -moz-box-shadow: 8px 8px 0px 0px #222326;
+    box-shadow: 8px 8px 0px 0px #222326;
+    border-radius: 5px;
+
+    @include media-screen-small {
+      padding: $space-md;
+    }
+  }
+
+  &__content {
     max-width: 50rem;
-    padding: $space-md;
     margin: 0 auto;
 
     @include media-screen-small {
       text-align: left;
     }
+
     h1 {
       font-size: $font-size-xxl;
       line-height: $font-size-xxl * 1.2;
+    }
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -28,10 +47,6 @@
       padding: 0.3em 0.8em;
       resize: vertical;
       width: 100%;
-
-      @include media-screen-small {
-        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
-      }
     }
 
     button {
@@ -43,15 +58,24 @@
       cursor: pointer;
 
       border-radius: 0 $border-radius-lg $border-radius-lg 0;
-
-      @include media-screen-small {
-        margin-top: $space-md;
-        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-md;
-      }
     }
 
     button:hover {
       transition: 0.3s;
+    }
+
+    @include media-screen-small {
+      display: block;
+
+      input {
+        border-radius: $border-radius-lg
+      }
+
+      button {
+        width: 100%;
+        margin-top: $space-md;
+        border-radius: $border-radius-lg;
+      }
     }
   }
 }
