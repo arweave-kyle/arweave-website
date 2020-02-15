@@ -1,17 +1,23 @@
-import *  as React from "react"
+import { useState, useEffect } from "react"
+import { isMobile } from "react-device-detect";
 
-function getImagePaths() {
+function getImagePaths(isMobile = false) {
   const images = []
-  for (let i = 1; i <= 150; i++) {
+  const totalImages = isMobile ? 100 : 150;
+  for (let i = 1; i <= totalImages; i++) {
     images.push(`/images/hexagonbg/${i}.png`)
   }
   return images
 }
 
 const HexagonBackground: React.FunctionComponent = () => {
-  const [opacity, setOpacity] = React.useState(1);
+  const [opacity, setOpacity] = useState(1);
+  const [imagePaths, setImagePaths] = useState<string[]>([]);
+  const [className, setClassName] = useState("");
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setImagePaths(getImagePaths(isMobile));
+    setClassName(isMobile ? "mobile" : "desktop")
     // Fade out while scrolling
     window.onscroll = () => {
       const newScrollHeight = Math.ceil(window.scrollY);
@@ -21,7 +27,6 @@ const HexagonBackground: React.FunctionComponent = () => {
     }
   }, []);
 
-  const imagePaths = getImagePaths()
   const renderGridItem = imagePaths.map((imagePath, index) => {
     const key = `${index}`
     return (
@@ -34,7 +39,7 @@ const HexagonBackground: React.FunctionComponent = () => {
   })
 
   return (
-    <ul className="hexagonbg-grid clear" style={{ opacity }}>
+    <ul className={`hexagonbg-grid clear ${className}`} style={{ opacity }}>
       {renderGridItem}
     </ul>
   )
