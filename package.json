@@ -18,6 +18,8 @@
     "@types/fingerprintjs2": "^2.0.0",
     "@types/js-cookie": "^2.2.4",
     "@types/react-google-recaptcha": "^1.1.1",
+    "@types/react-tooltip": "^3.11.0",
+    "@types/validator": "^12.0.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "aos": "^3.0.0-beta.6",
@@ -34,7 +36,9 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
     "react-google-recaptcha": "^2.0.1",
-    "react-simple-tree-menu": "^1.1.14"
+    "react-simple-tree-menu": "^1.1.14",
+    "react-tooltip": "^4.0.3",
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
