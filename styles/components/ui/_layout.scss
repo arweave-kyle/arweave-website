@@ -3,6 +3,8 @@
   min-height: 100vh;
   flex-direction: column;
 
+  position: relative;
+
   &__inner {
     display: flex;
     overflow: hidden;

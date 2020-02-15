@@ -3,11 +3,13 @@
 .hexagonbg-grid-container {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: -$space-md;
   right: 0;
 
   z-index: -1;
   margin-top: 0;
+  overflow: hidden;
 
   background-color: $color-super-light-gray;
 }
