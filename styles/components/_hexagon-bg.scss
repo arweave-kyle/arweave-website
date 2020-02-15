@@ -69,6 +69,49 @@
   }
 }
 
+// ***** Fade in effect *****
+@keyframes hexagonFadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hexagonFadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hexagonbg-grid li .hexagon {
+  @for $i from 0 through 100 {
+    .tile-#{$i} {
+      $random-delay: random(20) / 10 * 1s;
+
+      -webkit-animation: hexagonFadein;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-delay: $random-delay;
+
+      animation: hexagonFadein;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: $random-delay;
+
+      opacity: 0;
+    }
+  }
+}
+
+// ***** End fade in effect *****
+
 /* (col*2)n+(maxCol+1) */
 .hexagonbg-grid li:nth-child(18n+10),
 .hexagonbg-grid li:nth-child(18n+11),
