@@ -39,9 +39,11 @@ const HexagonBackground: React.FunctionComponent = () => {
   })
 
   return (
-    <ul className={`hexagonbg-grid clear ${className}`} style={{ opacity }}>
-      {renderGridItem}
-    </ul>
+    <div className="hexagonbg-grid-container">
+      <ul className={`hexagonbg-grid clear ${className}`} style={{ opacity }}>
+        {renderGridItem}
+      </ul>
+    </div>
   )
 }
 

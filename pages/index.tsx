@@ -6,7 +6,6 @@ import Layout from '../components/ui/Layout'
 import CardLinkSection from '../components/CardLinkSection'
 import TitleSection from '../components/TitleSection'
 import NewsletterSignup from '../components/NewsletterSignup'
-import HexagonBackground from '../components/HexagonBackground'
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -14,8 +13,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <Layout>
-      <HexagonBackground />
+    <Layout withHexagonBg>
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} title="Store data, permanently"
         desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
         action="SEE DOCUMENTATION" />

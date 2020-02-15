@@ -1,14 +1,18 @@
 /* Hexagonal Grid */
 
-.hexagonbg-grid {
+.hexagonbg-grid-container {
   position: absolute;
-  top: $space-md;
+  top: 0;
   left: -$space-md;
   right: 0;
 
   z-index: -1;
-  overflow: hidden;
+  margin-top: 0;
 
+  background-color: $color-super-light-gray;
+}
+
+.hexagonbg-grid {
   margin: 0 0;
   padding: 0;
 }
