@@ -3,11 +3,14 @@
 
   &__inner {
     padding: $space-lg;
+
     background: white;
 
     -webkit-box-shadow: 8px 0px 0px #222326;
     -moz-box-shadow: 8px 8px 0px 0px #222326;
     box-shadow: 8px 8px 0px 0px #222326;
+
+    border: black 1px solid;
     border-radius: 5px;
 
     @include media-screen-small {
@@ -19,40 +22,63 @@
     max-width: 50rem;
     margin: 0 auto;
 
-    @include media-screen-small {
-      text-align: left;
-    }
-
     h1 {
       font-size: $font-size-xxl;
       line-height: $font-size-xxl * 1.2;
     }
 
     p {
-      margin-left: auto;
-      margin-right: auto;
+      margin: $space-lg auto;
+    }
+
+    @include media-screen-small {
+      text-align: left;
+
+      p {
+        margin: ($space-md+0.5rem) auto;
+      }
     }
   }
 
   form {
     display: flex;
+    margin-top: 0;
 
-    input {
+    position: relative;
+
+    .input-container {
+      width: 100%;
+      position: relative;
+
       box-shadow: 0 6px $color-text-black;
       border: $border-width-sm solid $color-text-black;
       border-radius: $border-radius-lg 0 0 $border-radius-lg;
       box-sizing: border-box;
-      font: inherit;
-      font-size: $font-size-md;
-      padding: 0.3em 0.8em;
-      resize: vertical;
-      width: 100%;
+      background-color: white;
+
+      input {
+        width: 100%;
+
+        font-size: $font-size-xl;
+        padding: 0.3em 3rem 0.3rem 0.8rem;
+        border-radius: $border-radius-lg 0 0 $border-radius-lg;
+        border: none;
+        background-color: transparent;
+      }
+
+      img {
+        position: absolute;
+        margin-top: 0;
+
+        right: $space-sm;
+        top: $space-sm;
+      }
     }
 
     button {
       margin-top: 0;
       text-transform: uppercase;
-      font-size: $font-size-md;
+      font-size: $font-size-xl;
       font-weight: 400;
       transition: 0.3s;
       cursor: pointer;
@@ -64,11 +90,23 @@
       transition: 0.3s;
     }
 
+    p.error {
+      position: absolute;
+      margin: 0;
+      top: 3.8rem;
+      text-align: left;
+      color: $color-red;
+    }
+
     @include media-screen-small {
       display: block;
 
-      input {
-        border-radius: $border-radius-lg
+      .input-container {
+        border-radius: $border-radius-lg;
+
+        input {
+          border-radius: $border-radius-lg
+        }
       }
 
       button {
@@ -76,6 +114,20 @@
         margin-top: $space-md;
         border-radius: $border-radius-lg;
       }
+
+      p.error {
+        top: -1.5rem;
+      }
+    }
+  }
+
+  form.error {
+    .input-container {
+      border: $border-width-sm solid $color-red;
+    }
+
+    button {
+      border: $border-width-sm solid $color-red;
     }
   }
 }
