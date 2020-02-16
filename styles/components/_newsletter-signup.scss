@@ -31,6 +31,15 @@
       margin: $space-lg auto;
     }
 
+    p.input-readonly-style {
+      max-width: 35rem;
+      font-size: $font-size-xl;
+      padding: 0.3rem 0.8rem;
+
+      border: $border-width-sm solid $color-text-black;
+      border-radius: $border-radius-lg
+    }
+
     @include media-screen-small {
       text-align: left;
 
