@@ -33,7 +33,7 @@
 
     p.input-readonly-style {
       max-width: 35rem;
-      font-size: $font-size-xl;
+      font-size: $font-size-md;
       padding: 0.3rem 0.8rem;
 
       border: $border-width-sm solid $color-text-black;
@@ -68,8 +68,8 @@
       input {
         width: 100%;
 
-        font-size: $font-size-xl;
-        padding: 0.3em 3rem 0.3rem 0.8rem;
+        font-size: $font-size-md;
+        padding: 0.35em 3rem 0.3rem 0.8rem;
         border-radius: $border-radius-lg 0 0 $border-radius-lg;
         border: none;
         background-color: transparent;
@@ -87,7 +87,7 @@
     button {
       margin-top: 0;
       text-transform: uppercase;
-      font-size: $font-size-xl;
+      font-size: $font-size-md;
       font-weight: 400;
       transition: 0.3s;
       cursor: pointer;
