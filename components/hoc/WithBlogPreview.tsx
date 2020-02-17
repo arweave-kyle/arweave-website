@@ -8,7 +8,7 @@ type Props = {
 
 export default function WithBlogPreview<P extends Props>(WrappedComponent: NextComponentType<P>): React.ComponentType<P> {
   function WithBlogPreviewWrapper(props: any) {
-    const { meta } = props;
+    const { children, meta } = props;
     const { title, category, date, link } = meta || {};
     const dateFormat = moment(date).format("DD MMM YYYY")
     return (
@@ -20,6 +20,7 @@ export default function WithBlogPreview<P extends Props>(WrappedComponent: NextC
           <span>{`Published on ${dateFormat}`}</span>
           <span className={category}>{category}</span>
         </div>
+        {children}
       </div>
     )
   }
