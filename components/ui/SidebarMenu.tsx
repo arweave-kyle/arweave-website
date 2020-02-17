@@ -118,14 +118,7 @@ const communityTreeData = [
     key: 'blog',
     label: 'blog',
     isNew: true,
-    nodes: [
-      {
-        key: 'blog-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    url: '/blog'
   }
 ];
 

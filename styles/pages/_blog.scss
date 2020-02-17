@@ -1,0 +1,32 @@
+.blog {
+  position: relative;
+
+  &__header-bg {
+    height: 6rem;
+    width: 100vw;
+    max-width: none;
+    position: absolute;
+    top: - $space-md;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    z-index: -1;
+    background-color: $color-light-gray;
+    border-bottom: black 2px dashed;
+  }
+
+  &__header {
+    h2 {
+      font-weight: bold;
+    }
+  }
+
+  &__post-grid {
+    @include layout-grid($space-lg);
+
+    margin-top: $space-lg;
+    grid-template-columns: 1fr 1fr;
+  }
+}
