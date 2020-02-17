@@ -30,7 +30,7 @@
   }
 }
 
-// Adds even horizontal spacing between the children of an element. Also clears
+// Adds even horizontal spacing between the children of an element. Also clearsh1
 // any vertical spacing between the children.
 @mixin even-spacing-h($space: $line-height-default * 1em) {
   >* {

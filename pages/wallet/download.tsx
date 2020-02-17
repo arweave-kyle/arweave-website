@@ -56,6 +56,7 @@ const WalletDownload: NextPage = () => {
   return (
     <Layout className="tokens download">
       <div className="tokens__inner">
+      <img src="/images/icons/key.svg" />
         <h1>Download your key file</h1>
         <p>Nobody (including the arweave project) can help you recover your wallet if the key file is lost.</p>
         <p className="bold">So, remember to keep it safe!</p>
@@ -72,7 +73,7 @@ const WalletDownload: NextPage = () => {
             </ReactTooltip>
             I understand that I am responsible for my key file.
           </label>
-          <button className="primary" type="submit" >download key</button>
+          <button className="primary" type="submit" >DOWNLOAD KEY</button>
         </form>
       </div>
     </Layout>

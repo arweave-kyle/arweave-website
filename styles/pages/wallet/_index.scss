@@ -23,6 +23,7 @@
 
     label {
       font-weight: bold;
+      color: $color-black;
     }
 
     input {
@@ -32,6 +33,7 @@
     button {
       max-width: 20rem;
       margin: $space-md auto;
+      transition: 0.3s;
     }
   }
 }

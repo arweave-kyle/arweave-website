@@ -1,14 +1,22 @@
 .tokens.process {
   h1 {
     font-size: $font-size-xxl;
+    color: $color-black;
+    margin-top: $space-xs;
   }
 
   p.bold {
     font-weight: bold;
+    color: $color-black;
   }
 
   p:first-of-type {
     margin-bottom: $space-md;
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: underline dotted;
   }
 
   .cp-spinner {
@@ -21,7 +29,7 @@
 
   .cp-skeleton {
     border-radius: 50%;
-    border-top: solid 6px black;
+    border-top: solid 6px $color-black;
     border-right: solid 6px transparent;
     border-bottom: solid 6px transparent;
     border-left: solid 6px transparent;
@@ -38,7 +46,7 @@
     border-top: solid 6px transparent;
     border-right: solid 6px transparent;
     border-bottom: solid 6px transparent;
-    border-left: solid 6px black;
+    border-left: solid 6px $color-black;
     position: absolute;
     top: -6px;
     left: -6px;
@@ -53,7 +61,7 @@
     display: inline-block;
     box-sizing: border-box;
     border-top: solid 6px transparent;
-    border-right: solid 6px black;
+    border-right: solid 6px $color-black;
     border-bottom: solid 6px transparent;
     border-left: solid 6px transparent;
     position: absolute;

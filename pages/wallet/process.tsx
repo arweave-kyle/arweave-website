@@ -59,11 +59,13 @@ const WalletProcess: NextPage = () => {
   function renderError() {
     return (
       <div className="tokens__inner">
-        <p>Hmm, looks like somethng went wrong.</p>
+        <img src="/images/icons/error1.svg" />
+        <h1>Oops!</h1>
+        <p>Looks like somethng went wrong.</p>
         <div className="details">
           <p>
-            Try again or
-            <a href="mailto:team@arweave.org">contact support</a> if this continues.
+            Try again or email
+            <a href="mailto:team@arweave.org">support</a> if this continues.
           </p>
         </div>
       </div>
@@ -73,6 +75,7 @@ const WalletProcess: NextPage = () => {
   function renderSuccess() {
     return (
       <div className="tokens__inner">
+        <img src="/images/icons/email.svg" />
         <h1>Check your email!</h1>
         <p>We've sent you an email with instruction and a wallet download link.</p>
         <p className="bold">From: team@arweave.org</p>

@@ -63,7 +63,7 @@ const Wallet: NextPage = () => {
             </ReactTooltip>
             I understand and agree to the privacy policy.
           </label>
-          <button className="primary" type="submit" >sign up with Google</button>
+          <button className="primary" type="submit" >SIGN UP WITH GOOGLE</button>
           <ReCAPTCHA
             ref={recaptchaRef}
             size="invisible"
