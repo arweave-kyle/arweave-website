@@ -1,6 +1,7 @@
 import React from "react"
 import { NextComponentType } from "next"
 import moment from "moment"
+import BlogInfoBar from "../blog/InfoBar"
 
 type Props = {
   meta: object
@@ -16,10 +17,7 @@ export default function WithBlogPreview<P extends Props>(WrappedComponent: NextC
         <a href={link}>
           {title}
         </a>
-        <div className="blog-preview__info">
-          <span>{`Published on ${dateFormat}`}</span>
-          <span className="category">{category}</span>
-        </div>
+        <BlogInfoBar category={category} publishedDate={dateFormat} />
         {children}
       </div>
     )

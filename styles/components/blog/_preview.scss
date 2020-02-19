@@ -1,7 +1,6 @@
 .blog-preview {
   position: relative;
   padding-bottom: $space-md;
-  margin-bottom: $space-lg;
 
   a {
     text-decoration: none;
@@ -11,28 +10,6 @@
 
     &:hover {
       border-bottom: 2px dotted;
-    }
-  }
-
-  &__info {
-    display: flex;
-    flex-wrap: wrap;
-
-    span {
-      margin-top: 0;
-
-      color: $color-dark-gray;
-
-      &:nth-child(1) {
-        margin-right: $space-md;
-        text-transform: uppercase;
-      }
-
-      &:nth-child(2) {
-        padding: 0 $space-xs $space-xxs $space-xs;
-        border: black 1px solid;
-        border-radius: $border-radius-md;
-      }
     }
   }
 
@@ -54,16 +31,10 @@
 }
 
 .blog-preview.announcement {
-
   a:hover {
     border-color: $color-blue;
     text-decoration-color: $color-blue;
     color: $color-blue;
-  }
-
-  span.category {
-    color: $color-blue;
-    border-color: $color-blue;
   }
 }
 
@@ -73,11 +44,6 @@
     text-decoration-color: $color-purple;
     color: $color-purple;
   }
-
-  span.category {
-    color: $color-purple;
-    border-color: $color-purple;
-  }
 }
 
 .blog-preview.ecosystem {
@@ -85,10 +51,5 @@
     border-color: $color-light-blue;
     text-decoration-color: $color-light-blue;
     color: $color-light-blue;
-  }
-
-  span.category {
-    color: $color-light-blue;
-    border-color: $color-light-blue;
   }
 }
