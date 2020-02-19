@@ -12,13 +12,13 @@ export default function WithBlogPreview<P extends Props>(WrappedComponent: NextC
     const { title, category, date, link } = meta || {};
     const dateFormat = moment(date).format("DD MMM YYYY")
     return (
-      <div className="blog-preview">
+      <div className={`blog-preview ${category}`}>
         <a href={link}>
-          <h1>{title}</h1>
+          {title}
         </a>
         <div className="blog-preview__info">
           <span>{`Published on ${dateFormat}`}</span>
-          <span className={category}>{category}</span>
+          <span className="category">{category}</span>
         </div>
         {children}
       </div>

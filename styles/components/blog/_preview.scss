@@ -5,15 +5,13 @@
 
   a {
     text-decoration: none;
+    font-size: $font-size-xxl;
+    font-weight: bold;
+    color: $color-black;
 
     &:hover {
-      text-decoration: underline;
-      text-decoration-color: black;
+      border-bottom: 2px dotted;
     }
-  }
-
-  h1 {
-    display: inline;
   }
 
   &__info {
@@ -22,6 +20,8 @@
 
     span {
       margin-top: 0;
+
+      color: $color-dark-gray;
 
       &:nth-child(1) {
         margin-right: $space-md;
@@ -33,21 +33,6 @@
         border: black 1px solid;
         border-radius: $border-radius-md;
       }
-    }
-
-    span.announcement {
-      color: $color-blue;
-      border-color: $color-blue;
-    }
-
-    span.community {
-      color: $color-purple;
-      border-color: $color-purple;
-    }
-
-    span.ecosystem {
-      color: $color-light-blue;
-      border-color: $color-light-blue;
     }
   }
 
@@ -62,8 +47,48 @@
   }
 
   @include media-screen-small {
-    h1 {
+    a {
       font-size: $font-size-xl;
     }
+  }
+}
+
+.blog-preview.announcement {
+
+  a:hover {
+    border-color: $color-blue;
+    text-decoration-color: $color-blue;
+    color: $color-blue;
+  }
+
+  span.category {
+    color: $color-blue;
+    border-color: $color-blue;
+  }
+}
+
+.blog-preview.community {
+  a:hover {
+    border-color: $color-purple;
+    text-decoration-color: $color-purple;
+    color: $color-purple;
+  }
+
+  span.category {
+    color: $color-purple;
+    border-color: $color-purple;
+  }
+}
+
+.blog-preview.ecosystem {
+  a:hover {
+    border-color: $color-light-blue;
+    text-decoration-color: $color-light-blue;
+    color: $color-light-blue;
+  }
+
+  span.category {
+    color: $color-light-blue;
+    border-color: $color-light-blue;
   }
 }
