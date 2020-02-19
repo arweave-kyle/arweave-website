@@ -13,7 +13,7 @@ export default function WithBlogPost<P extends Props>(WrappedComponent: NextComp
     const { children, meta } = props;
     const { title, category, desc, date } = meta || {};
     const dateFormat = moment(date).format("DD MMM YYYY")
-    console.log(props);
+
     return (
       <Layout className="blog-post" title={title || ""} desc={desc || ""}>
         <div className="blog-post__header-bg" />
