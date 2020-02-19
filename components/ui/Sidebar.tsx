@@ -8,12 +8,13 @@ const Sidebar: React.FunctionComponent = () => {
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`} >
       <nav>
-        <div className='icon' onClick={() => setOpen(!isOpen)} >
+        <div className={`hamburger-icon ${isOpen ? "open" : "closed"}`} onClick={() => setOpen(!isOpen)} >
           <div></div>
           <div></div>
           <div></div>
         </div>
       </nav>
+      <div className={`sidebar__content-clone ${isOpen ? "open" : "closed"}`} />
       <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
         <div className="close-icon">
           <div className="close-icon__inner" onClick={() => setOpen(false)}>

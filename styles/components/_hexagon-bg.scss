@@ -61,37 +61,18 @@
 }
 
 // ***** Fade in effect *****
-@keyframes hexagonFadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes hexagonFadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .hexagonbg-grid li .hexagon {
   @for $i from 0 through 100 {
     .tile-#{$i} {
       $random-delay: random(20) / 10 * 1s;
 
-      -webkit-animation: hexagonFadein;
+      -webkit-animation: effectFadein;
       -webkit-animation-duration: 1s;
       -webkit-animation-fill-mode: forwards;
       -webkit-animation-delay: $random-delay;
 
-      animation: hexagonFadein;
+      animation: effectFadein;
       animation-duration: 1s;
       animation-fill-mode: forwards;
       animation-delay: $random-delay;

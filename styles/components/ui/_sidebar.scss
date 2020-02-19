@@ -1,44 +1,103 @@
 $sidebar-width: 22rem;
 
 .sidebar {
-  transition: width $duration-short;
-
   width: 0;
   margin: 0;
   z-index: 11;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
-
+  transition: width $duration-short;
 
   nav {
     position: fixed;
-
-    z-index: 11;
     width: 0;
-
+    z-index: 11;
     background: white;
   }
 
-  .icon {
+  &.open {
+    width: $sidebar-width;
+
+    nav {
+      width: $sidebar-width;
+    }
+
+    @include media-screen-small {
+      nav {
+        width: 0;
+      }
+
+      width: 0;
+    }
+  }
+
+  .hamburger-icon {
     height: max-content;
     width: max-content;
-
     margin-left: $space-md;
     cursor: pointer;
 
     div {
       width: 27px;
-      height: 2px;
+      height: 3px;
       background-color: black;
+      -webkit-animation: effectFadein 1s;
+      animation: effectFadein 1s;
+      animation-fill-mode: forwards;
 
       +* {
         margin-top: 0.5rem;
       }
     }
+
+    &.open {
+
+      div:nth-child(1),
+      div:nth-child(3) {
+        -webkit-animation: effectFadeout 0.5s;
+        animation: effectFadeout 0.5s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &__content-clone {
+    margin-top: $navbar-height;
+    transition: transform $duration-short;
+    width: $sidebar-width;
+
+    &.closed {
+      transform: translateX(-100%);
+    }
+  }
+
+  &__content {
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: $navbar-height;
+    width: $sidebar-width;
+    background: white;
+    transition: transform $duration-short;
+
+    &__inner {
+      margin-top: 0;
+      padding: 0 $space-md $space-md $space-md;
+      padding-top: $space-sm + $space-md;
+
+      @include media-screen-small {
+        padding-top: $navbar-height;
+      }
+    }
+
+    &.closed {
+      transform: translateX(-100%);
+    }
   }
 
   .close-icon {
     display: none;
-
     z-index: 1;
     background: white;
 
@@ -49,30 +108,13 @@ $sidebar-width: 22rem;
     }
   }
 
-  &__content {
-    margin-top: $navbar-height;
-    transition: transform $duration-short;
-    width: $sidebar-width;
-
-    background: white;
-
-    &__inner {
-      padding: 0 $space-md $space-md $space-md;
-      padding-top: $space-sm + $space-md;
-
-      @include media-screen-small {
-        padding-top: $navbar-height;
-      }
-    }
-  }
-
-  &__content.closed {
-    transform: translateX(-100%);
-  }
-
   @include media-screen-small {
     nav {
       z-index: 10;
+    }
+
+    .hamburger-icon.open {
+      display: none;
     }
 
     .close-icon {
@@ -98,64 +140,25 @@ $sidebar-width: 22rem;
       -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
       -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
       transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
-    }
 
-    &__content.closed {
-      transform: none;
-      left: -100%;
+      &.closed {
+        transform: none;
+        left: -100%;
 
-      .close-icon {
-        display: none;
+        .close-icon {
+          display: none;
+        }
+      }
+
+      &.open {
+        left: 0;
+
+        .close-icon {
+          display: block;
+          -webkit-animation: effectFadein 1s;
+          animation: effectFadein 1s;
+        }
       }
     }
-
-    &__content.open {
-      left: 0;
-
-      .close-icon {
-        display: block;
-
-        /** Register your custom effects  **/
-        @-webkit-keyframes fadeEffect {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes fadeEffect {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
-        }
-
-        -webkit-animation: fadeEffect 1s;
-        animation: fadeEffect 1s;
-        /* Fading effect takes 1 second */
-      }
-    }
-  }
-}
-
-.sidebar.open {
-  width: $sidebar-width;
-
-  nav {
-    width: $sidebar-width;
-  }
-
-  @include media-screen-small {
-    nav {
-      width: 0;
-    }
-
-    width: 0;
   }
 }
