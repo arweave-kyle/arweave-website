@@ -1,0 +1,107 @@
+.api-code-block {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 8rem;
+  p {
+    margin: 0.8rem 0;
+  }
+  .label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  .api-code-block__endpoint {
+    display: block;
+    color: #fff;
+    background: #393b46;
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    .method,
+    .endpoint {
+      padding: 1rem;
+      font-weight: 300;
+      display: inline-block;
+      margin: 0;
+    }
+    .method {
+      padding: 1rem 1.5rem;
+      background: #282a36;
+      font-weight: 600;
+    }
+  }
+  .api-code-block__parameters {
+    .parameter-name {
+      background: #393b46;
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      display: inline-block;
+      border-radius: 2px;
+      margin-right: 0.8rem;
+    }
+  }
+  .headers {
+    margin: 0;
+    .header {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .header-name,
+    .header-value {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1rem;
+    }
+  }
+  .api-code-block__response {
+    background: #f5f5f5;
+    padding: 1rem;
+    .content {
+      position: relative;
+      background: #fefefe;
+      padding: 0.7rem 0.5rem;
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #393b46;
+    }
+    .response-status {
+      .response-status-code,
+      .response-status-text {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1ch;
+        line-height: 1rem;
+        font-size: 0.9rem;
+      }
+      .response-color {
+        background: rgb(255, 0, 0);
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0.5ch;
+        margin: 0 0.3rem 0.1rem 0;
+        border-radius: 50%;
+        color: transparent;
+      }
+    }
+    .response-status,
+    .response-headers,
+    .response-body {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .response-body .content {
+      background: #393b46;
+      border-radius: 2px;
+      padding: 1rem;
+      code {
+        padding: 0;
+      }
+    }
+  }
+}

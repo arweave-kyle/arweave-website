@@ -1,0 +1,100 @@
+import WithLayout from "../../components/hoc/WithLayout";
+import {APIBlock} from "../../components/docs/APIBlock";
+
+export const meta = {
+  title: 'about us - Arweave',
+  desc: 'Mauris sit amet viverra eros. Fusce eu tincidunt tellus, vel dignissim arcu. Pellentesque rhoncus eu ipsum in feugiat. Donec aliquam nec nisi non aliquet.',
+}
+
+export default WithLayout();
+
+
+# HTTP API
+
+An overview of the Arweave HTTP API.
+
+***
+
+## Introduction
+
+The Arweave `protocol` is based on HTTP, so any existing http clients and libraries can be used to interface with the network, for example Axios or Fetch for JavaScript, Guzzle for PHP, etc.
+
+<div className="docs-nav">
+<div className="section">
+</div>
+
+</div>
+
+<APIBlock
+method="GET"
+endpoint="/info"
+responses={[
+  {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      network: "arweave.N.1",
+      version: 5,
+      release: 34,
+      height: 389272,
+      current: "d2pHZSonMeTBe1YV49YrMeyrCNd1lvHooaoy9sw2--3HzC7bOIqVj_wLSpZ9h8Iq",
+      blocks: 414121,
+      peers: 549,
+      queue_length: 0,
+      node_state_latency: 41
+    }
+  }
+]}>
+
+Get information about the current network and node status.
+</APIBlock>
+
+<APIBlock
+id="wallet-get-balance"
+method="GET"
+endpoint="/wallet/:address/balance"
+responses={[
+  {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: 10000000000
+  },
+  {
+    status: 400
+  }
+]}
+parameters={{
+  address: 'The wallet address to query.'
+}}
+>
+
+Get the current balance of a given wallet address.
+</APIBlock>
+
+
+<APIBlock
+method="GET"
+endpoint="/price/:bytes/:address"
+responses={[
+  {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: 10000000000
+  }
+]}
+parameters={{
+  bytes: 'The number of bytes in the transaction data field before base64url encoding.',
+  address: 'Optional. The wallet address to query.'
+}}
+>
+
+Get the minimum acceptable price for a transaction, with a data field  of `bytes` length before base64url encoding.
+</APIBlock>
+
+
